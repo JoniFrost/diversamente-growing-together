@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: substituir BASE_URL pelo domínio final quando estiver definido -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>/</loc><priority>1.0</priority></url>
+  <url><loc>/sobre-nos</loc><priority>0.8</priority></url>
+  <url><loc>/servicos</loc><priority>0.9</priority></url>
+  <url><loc>/como-trabalhamos</loc><priority>0.7</priority></url>
+  <url><loc>/perguntas-frequentes</loc><priority>0.7</priority></url>
+  <url><loc>/contactos</loc><priority>0.8</priority></url>
+</urlset>
