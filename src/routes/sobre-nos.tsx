@@ -1,0 +1,135 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Button } from "@/components/ui/button";
+import { Reveal } from "@/components/site/Reveal";
+import { PageHeader } from "@/components/site/PageHeader";
+
+const title = "Sobre nós — Diversamente";
+const description =
+  "Conheça a missão, a visão e os valores da Diversamente: intervenção individualizada, inclusiva e baseada em evidência para crianças e famílias.";
+
+export const Route = createFileRoute("/sobre-nos")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:url", content: "/sobre-nos" },
+    ],
+    links: [{ rel: "canonical", href: "/sobre-nos" }],
+  }),
+  component: SobreNos,
+});
+
+const valores = [
+  "Respeito pela individualidade",
+  "Inclusão",
+  "Empatia",
+  "Colaboração",
+  "Ética",
+  "Intervenção baseada em evidência",
+  "Aprendizagem através da brincadeira",
+  "Valorização das famílias",
+];
+
+function SobreNos() {
+  return (
+    <>
+      <PageHeader
+        eyebrow="Sobre nós"
+        title="Diferentes formas de aprender. O mesmo direito a participar."
+      />
+
+      <section className="mx-auto max-w-3xl space-y-4 px-4 py-16 text-lg text-foreground/80">
+        <Reveal>
+          <p>
+            A Diversamente nasceu da vontade de criar um espaço onde as diferenças fossem
+            compreendidas, respeitadas e transformadas em oportunidades de desenvolvimento.
+          </p>
+          <p className="mt-4">
+            Acreditamos que a intervenção deve acontecer de forma próxima, positiva e funcional,
+            envolvendo não apenas a criança, mas também a família, a escola e os restantes contextos
+            importantes da sua vida.
+          </p>
+          <p className="mt-4">
+            O nosso objetivo é ajudar cada criança a desenvolver competências que aumentem a sua
+            comunicação, autonomia, participação e qualidade de vida.
+          </p>
+        </Reveal>
+      </section>
+
+      <section className="mx-auto grid max-w-6xl gap-6 px-4 pb-16 md:grid-cols-2">
+        <Reveal>
+          <div className="h-full rounded-3xl bg-brand-blue-soft p-8">
+            <h2 className="text-2xl font-bold">Missão</h2>
+            <p className="mt-3 text-foreground/80">
+              Proporcionar acompanhamento especializado, individualizado e baseado em evidência,
+              promovendo o desenvolvimento e a participação das crianças nos seus diferentes
+              contextos.
+            </p>
+          </div>
+        </Reveal>
+        <Reveal delay={100}>
+          <div className="h-full rounded-3xl bg-brand-green-soft p-8">
+            <h2 className="text-2xl font-bold">Visão</h2>
+            <p className="mt-3 text-foreground/80">
+              Construir uma comunidade mais inclusiva, onde cada criança tenha acesso às
+              oportunidades e ao apoio de que necessita para aprender e crescer.
+            </p>
+          </div>
+        </Reveal>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 pb-16">
+        <Reveal>
+          <h2 className="text-center text-3xl font-bold">Os nossos valores</h2>
+        </Reveal>
+        <ul className="mt-8 flex flex-wrap justify-center gap-3">
+          {valores.map((valor, i) => (
+            <Reveal as="li" key={valor} delay={i * 50}>
+              <span className="inline-block rounded-full border border-border/70 bg-card px-5 py-2.5 text-sm font-semibold">
+                {valor}
+              </span>
+            </Reveal>
+          ))}
+        </ul>
+      </section>
+
+      <section className="bg-muted/60 py-16">
+        <div className="mx-auto max-w-6xl px-4">
+          <Reveal>
+            <h2 className="text-center text-3xl font-bold">A nossa equipa</h2>
+            <p className="mx-auto mt-3 max-w-2xl text-center text-foreground/75">
+              Em breve poderá conhecer aqui cada profissional, a sua função, formação e forma de
+              trabalhar com as crianças e famílias.
+            </p>
+          </Reveal>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[0, 1, 2].map((i) => (
+              <Reveal key={i} delay={i * 90}>
+                <article className="rounded-3xl border border-dashed border-border bg-card p-7 text-center">
+                  <div
+                    className="mx-auto size-24 rounded-full bg-brand-yellow-soft"
+                    aria-hidden="true"
+                  />
+                  <h3 className="mt-4 text-lg font-bold">Conheça em breve a nossa equipa</h3>
+                  <p className="mt-2 text-sm text-foreground/70">
+                    [Nome] · [Função] · [Formação] · [Pequena descrição]
+                  </p>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-4 py-16 text-center">
+        <Reveal>
+          <Button asChild size="lg" className="rounded-full">
+            <Link to="/contactos">Falar connosco</Link>
+          </Button>
+        </Reveal>
+      </section>
+    </>
+  );
+}
