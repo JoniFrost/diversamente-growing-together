@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SobreNosRouteImport } from './routes/sobre-nos'
 import { Route as ServicosRouteImport } from './routes/servicos'
 import { Route as PerguntasFrequentesRouteImport } from './routes/perguntas-frequentes'
+import { Route as ContactosRouteImport } from './routes/contactos'
 import { Route as ComoTrabalhamosRouteImport } from './routes/como-trabalhamos'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -30,6 +31,11 @@ const PerguntasFrequentesRoute = PerguntasFrequentesRouteImport.update({
   path: '/perguntas-frequentes',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactosRoute = ContactosRouteImport.update({
+  id: '/contactos',
+  path: '/contactos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ComoTrabalhamosRoute = ComoTrabalhamosRouteImport.update({
   id: '/como-trabalhamos',
   path: '/como-trabalhamos',
@@ -44,6 +50,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/como-trabalhamos': typeof ComoTrabalhamosRoute
+  '/contactos': typeof ContactosRoute
   '/perguntas-frequentes': typeof PerguntasFrequentesRoute
   '/servicos': typeof ServicosRoute
   '/sobre-nos': typeof SobreNosRoute
@@ -51,6 +58,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/como-trabalhamos': typeof ComoTrabalhamosRoute
+  '/contactos': typeof ContactosRoute
   '/perguntas-frequentes': typeof PerguntasFrequentesRoute
   '/servicos': typeof ServicosRoute
   '/sobre-nos': typeof SobreNosRoute
@@ -59,6 +67,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/como-trabalhamos': typeof ComoTrabalhamosRoute
+  '/contactos': typeof ContactosRoute
   '/perguntas-frequentes': typeof PerguntasFrequentesRoute
   '/servicos': typeof ServicosRoute
   '/sobre-nos': typeof SobreNosRoute
@@ -68,6 +77,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/como-trabalhamos'
+    | '/contactos'
     | '/perguntas-frequentes'
     | '/servicos'
     | '/sobre-nos'
@@ -75,6 +85,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/como-trabalhamos'
+    | '/contactos'
     | '/perguntas-frequentes'
     | '/servicos'
     | '/sobre-nos'
@@ -82,6 +93,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/como-trabalhamos'
+    | '/contactos'
     | '/perguntas-frequentes'
     | '/servicos'
     | '/sobre-nos'
@@ -90,6 +102,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ComoTrabalhamosRoute: typeof ComoTrabalhamosRoute
+  ContactosRoute: typeof ContactosRoute
   PerguntasFrequentesRoute: typeof PerguntasFrequentesRoute
   ServicosRoute: typeof ServicosRoute
   SobreNosRoute: typeof SobreNosRoute
@@ -118,6 +131,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PerguntasFrequentesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contactos': {
+      id: '/contactos'
+      path: '/contactos'
+      fullPath: '/contactos'
+      preLoaderRoute: typeof ContactosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/como-trabalhamos': {
       id: '/como-trabalhamos'
       path: '/como-trabalhamos'
@@ -138,6 +158,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ComoTrabalhamosRoute: ComoTrabalhamosRoute,
+  ContactosRoute: ContactosRoute,
   PerguntasFrequentesRoute: PerguntasFrequentesRoute,
   ServicosRoute: ServicosRoute,
   SobreNosRoute: SobreNosRoute,
