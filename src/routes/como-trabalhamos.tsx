@@ -23,36 +23,24 @@ export const Route = createFileRoute("/como-trabalhamos")({
 
 const etapas = [
   {
-    title: "Conhecer a criança para além do diagnóstico",
-    text: "Começamos por conhecer os interesses, a forma de comunicar e o que já faz parte do dia a dia da criança.",
+    title: "Reunião inicial com a família",
+    text: "Antes de iniciar qualquer intervenção, é realizada uma reunião com os pais/encarregados de educação. Esta reunião permite conhecer a criança, compreender o seu perfil, identificar dificuldades, perceber as expectativas da família e esclarecer qual a modalidade de apoio mais adequada.",
   },
   {
-    title: "Avaliar competências, dificuldades e interesses",
-    text: "Recolhemos informação junto da família e observamos a criança nos contextos relevantes.",
+    title: "Observação e recolha de informação",
+    text: "Durante a reunião inicial, e sempre que possível, a equipa observa a criança e recolhe informação junto da família. No caso do Shadowing, esta informação é essencial para perceber quais os contextos em que a criança necessita de maior apoio.",
   },
   {
-    title: "Definir objetivos mensuráveis e funcionais",
-    text: "Escolhemos objetivos com impacto real nas rotinas, na participação e na autonomia.",
+    title: "Definição da modalidade de intervenção",
+    text: "Após a reunião, é definido se a intervenção mais indicada será Terapia ABA individual, Shadowing em contexto escolar ou uma combinação de ambas.",
   },
   {
-    title: "Criar um plano individualizado",
-    text: "O plano organiza as prioridades, as estratégias e a forma de as aplicar nos vários contextos.",
+    title: "Proposta de número de horas",
+    text: "A equipa poderá sugerir uma carga horária semanal com base no perfil da criança, nos objetivos definidos e no tipo de apoio pretendido. A decisão final é sempre articulada com a família, tendo também em conta a sua disponibilidade e condições financeiras.",
   },
   {
-    title: "Recolher e analisar dados sobre a evolução",
-    text: "Registamos a evolução de cada objetivo para tomar decisões informadas ao longo do tempo.",
-  },
-  {
-    title: "Trabalhar em parceria com a família",
-    text: "Partilhamos estratégias e ajustamos o plano em conjunto com quem acompanha a criança todos os dias.",
-  },
-  {
-    title: "Articular com a escola e outros profissionais",
-    text: "Alinhamos as estratégias com professores, auxiliares e restantes técnicos envolvidos.",
-  },
-  {
-    title: "Adaptar regularmente a intervenção",
-    text: "Revemos objetivos e estratégias sempre que a evolução ou o contexto da criança o justificam.",
+    title: "Início da intervenção",
+    text: "Após acordo quanto à modalidade, horário, frequência e condições de funcionamento, inicia-se o acompanhamento da criança.",
   },
 ];
 
