@@ -15,11 +15,18 @@ export function Footer() {
     <footer className="mt-24 border-t border-border/60 bg-muted/60">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="flex items-center gap-2">
-            <img src={logo} alt="" width={40} height={40} loading="lazy" className="h-10 w-10" />
-            <span className="font-display text-xl font-bold text-primary">{siteInfo.name}</span>
-          </div>
-          <p className="mt-3 text-sm text-muted-foreground">{siteInfo.slogan}</p>
+          <img
+            src={logoAsset.url}
+            alt="Logótipo Diversamente"
+            width={192}
+            height={108}
+            loading="lazy"
+            className="h-14 w-auto"
+          />
+          <p className="mt-4 text-sm text-muted-foreground">
+            Clínica de desenvolvimento infantil em Portugal. Acolhemos cada criança com
+            dedicação, ciência e muito carinho.
+          </p>
         </div>
 
         <nav aria-label="Ligações do rodapé">
