@@ -15,8 +15,8 @@ export function Header() {
           <img
             src={logoAsset.url}
             alt="Logótipo Diversamente"
-            width={256}
-            height={144}
+            width={669}
+            height={362}
             className="h-16 w-auto"
             loading="eager"
           />
