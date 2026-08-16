@@ -18,10 +18,10 @@ export function Footer() {
           <img
             src={logoAsset.url}
             alt="Logótipo Diversamente"
-            width={192}
-            height={108}
+            width={256}
+            height={144}
             loading="lazy"
-            className="h-14 w-auto"
+            className="h-20 w-auto"
           />
           <p className="mt-4 text-sm text-muted-foreground">
             Clínica de desenvolvimento infantil em Portugal. Acolhemos cada criança com
