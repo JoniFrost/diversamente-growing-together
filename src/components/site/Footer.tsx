@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Mail, MapPin, Phone } from "lucide-react";
 import { navLinks, siteInfo } from "@/lib/site-info";
-import logo from "@/assets/logo-diversamente.png";
+import logoAsset from "@/assets/logo-diversamente.png.asset.json";
 
 const legalLinks = [
   "Política de Privacidade",

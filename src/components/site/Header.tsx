@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { navLinks, siteInfo } from "@/lib/site-info";
-import logo from "@/assets/logo-diversamente.png";
+import { navLinks } from "@/lib/site-info";
+import logoAsset from "@/assets/logo-diversamente.png.asset.json";
 
 export function Header() {
   const [open, setOpen] = useState(false);
