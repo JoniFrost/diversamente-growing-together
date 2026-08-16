@@ -18,8 +18,8 @@ export function Footer() {
           <img
             src={logoAsset.url}
             alt="Logótipo Diversamente"
-            width={256}
-            height={144}
+            width={669}
+            height={362}
             loading="lazy"
             className="h-20 w-auto"
           />
