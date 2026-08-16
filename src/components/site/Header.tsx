@@ -2,21 +2,24 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { navLinks, siteInfo } from "@/lib/site-info";
-import logo from "@/assets/logo-diversamente.png";
+import { navLinks } from "@/lib/site-info";
+import logoAsset from "@/assets/logo-diversamente.png.asset.json";
 
 export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3">
-        <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <img src={logo} alt="Logótipo Diversamente" width={40} height={40} className="h-10 w-10" />
-          <span className="flex flex-col leading-none">
-            <span className="font-display text-xl font-bold text-primary">{siteInfo.name}</span>
-            <span className="hidden text-xs text-muted-foreground sm:block">{siteInfo.slogan}</span>
-          </span>
+      <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-2">
+        <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
+          <img
+            src={logoAsset.url}
+            alt="Logótipo Diversamente"
+            width={256}
+            height={144}
+            className="h-16 w-auto"
+            loading="eager"
+          />
         </Link>
 
         <nav aria-label="Navegação principal" className="ml-auto hidden items-center gap-1 lg:flex">
