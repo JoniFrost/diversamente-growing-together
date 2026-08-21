@@ -100,25 +100,25 @@ function SobreNos() {
           <Reveal>
             <h2 className="text-center text-3xl font-bold">A nossa equipa</h2>
             <p className="mx-auto mt-3 max-w-2xl text-center text-foreground/75">
-              Em breve poderá conhecer aqui cada profissional, a sua função, formação e forma de
-              trabalhar com as crianças e famílias.
+              Conheça quem acompanha as crianças e famílias na Diversamente.
             </p>
           </Reveal>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[0, 1, 2].map((i) => (
-              <Reveal key={i} delay={i * 90}>
-                <article className="rounded-3xl border border-dashed border-border bg-card p-7 text-center">
-                  <div
-                    className="mx-auto size-24 rounded-full bg-brand-yellow-soft"
-                    aria-hidden="true"
-                  />
-                  <h3 className="mt-4 text-lg font-bold">Conheça em breve a nossa equipa</h3>
-                  <p className="mt-2 text-sm text-foreground/70">
-                    [Nome] · [Função] · [Formação] · [Pequena descrição]
-                  </p>
-                </article>
-              </Reveal>
-            ))}
+          <div className="mt-10 flex justify-center">
+            <Reveal>
+              <article className="max-w-sm rounded-3xl border border-border/60 bg-card p-7 text-center shadow-soft">
+                <div
+                  className="mx-auto size-24 rounded-full bg-brand-yellow-soft"
+                  aria-hidden="true"
+                />
+                <h3 className="mt-4 text-lg font-bold">Adriana Madeira</h3>
+                <p className="mt-2 text-sm text-foreground/70">
+                  Psicóloga Educacional
+                </p>
+                <p className="mt-1 text-xs text-foreground/60">
+                  Cédula Profissional n.º 29138
+                </p>
+              </article>
+            </Reveal>
           </div>
         </div>
       </section>
