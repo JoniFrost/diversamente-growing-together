@@ -35,7 +35,7 @@ const areas = [
     icon: MessageSquareHeart,
     tone: "bg-brand-blue-soft text-brand-blue",
     title: "Comunicação",
-    text: "Desenvolvimento da comunicação receptiva e expressiva.",
+    text: "Desenvolvimento da comunicação receptiva e expressiva.\n\n",
   },
   {
     icon: Footprints,
