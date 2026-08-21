@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
 import { PageHeader } from "@/components/site/PageHeader";
 import adrianaPhoto from "@/assets/adriana-madeira.jpg.asset.json";
+import inesPhoto from "@/assets/ines-costa.png.asset.json";
 
 const title = "Sobre nós — Diversamente";
 const description =
