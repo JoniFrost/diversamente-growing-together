@@ -4,6 +4,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { PageHeader } from "@/components/site/PageHeader";
 import adrianaPhoto from "@/assets/adriana-madeira.jpg.asset.json";
 import inesPhoto from "@/assets/ines-costa.png.asset.json";
+import neidPhoto from "@/assets/neid-cardoso.jpg.asset.json";
 
 const title = "Sobre nós — Diversamente";
 const description =
