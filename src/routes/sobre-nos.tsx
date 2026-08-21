@@ -126,12 +126,13 @@ function SobreNos() {
             </Reveal>
             <Reveal delay={90}>
               <article className="rounded-3xl border border-border/60 bg-card p-7 text-center shadow-soft">
-                <div
-                  className="mx-auto flex size-24 items-center justify-center rounded-full bg-brand-coral-soft text-lg font-bold text-brand-coral"
-                  aria-hidden="true"
-                >
-                  IC
-                </div>
+                <img
+                  src={inesPhoto.url}
+                  alt="Fotografia de Inês Costa, psicóloga clínica na Diversamente"
+                  width={192}
+                  height={192}
+                  className="mx-auto size-24 rounded-full object-cover"
+                />
                 <h3 className="mt-4 text-lg font-bold">Inês Costa</h3>
                 <p className="mt-2 text-sm text-foreground/70">
                   Psicóloga Clínica
