@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
 import { PageHeader } from "@/components/site/PageHeader";
+import adrianaPhoto from "@/assets/adriana-madeira.jpg.asset.json";
 
 const title = "Sobre nós — Diversamente";
 const description =
@@ -106,9 +107,12 @@ function SobreNos() {
           <div className="mt-10 flex justify-center">
             <Reveal>
               <article className="max-w-sm rounded-3xl border border-border/60 bg-card p-7 text-center shadow-soft">
-                <div
-                  className="mx-auto size-24 rounded-full bg-brand-yellow-soft"
-                  aria-hidden="true"
+                <img
+                  src={adrianaPhoto.url}
+                  alt="Fotografia de Adriana Madeira, psicóloga educacional na Diversamente"
+                  width={192}
+                  height={192}
+                  className="mx-auto size-24 rounded-full object-cover"
                 />
                 <h3 className="mt-4 text-lg font-bold">Adriana Madeira</h3>
                 <p className="mt-2 text-sm text-foreground/70">
