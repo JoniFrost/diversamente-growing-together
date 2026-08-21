@@ -104,9 +104,9 @@ function SobreNos() {
               Conheça quem acompanha as crianças e famílias na Diversamente.
             </p>
           </Reveal>
-          <div className="mt-10 flex justify-center">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
             <Reveal>
-              <article className="max-w-sm rounded-3xl border border-border/60 bg-card p-7 text-center shadow-soft">
+              <article className="rounded-3xl border border-border/60 bg-card p-7 text-center shadow-soft">
                 <img
                   src={adrianaPhoto.url}
                   alt="Fotografia de Adriana Madeira, psicóloga educacional na Diversamente"
@@ -120,6 +120,23 @@ function SobreNos() {
                 </p>
                 <p className="mt-1 text-xs text-foreground/60">
                   Cédula Profissional n.º 29138
+                </p>
+              </article>
+            </Reveal>
+            <Reveal delay={90}>
+              <article className="rounded-3xl border border-border/60 bg-card p-7 text-center shadow-soft">
+                <div
+                  className="mx-auto flex size-24 items-center justify-center rounded-full bg-brand-coral-soft text-lg font-bold text-brand-coral"
+                  aria-hidden="true"
+                >
+                  IC
+                </div>
+                <h3 className="mt-4 text-lg font-bold">Inês Costa</h3>
+                <p className="mt-2 text-sm text-foreground/70">
+                  Psicóloga Clínica
+                </p>
+                <p className="mt-1 text-xs text-foreground/60">
+                  Cédula Profissional n.º 29166
                 </p>
               </article>
             </Reveal>
