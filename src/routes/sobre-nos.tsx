@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
 import { PageHeader } from "@/components/site/PageHeader";
+import adrianaPhoto from "@/assets/adriana-madeira.jpg.asset.json";
 
 const title = "Sobre nós — Diversamente";
 const description =
