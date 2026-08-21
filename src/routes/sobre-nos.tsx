@@ -145,12 +145,13 @@ function SobreNos() {
             </Reveal>
             <Reveal delay={180}>
               <article className="rounded-3xl border border-border/60 bg-card p-7 text-center shadow-soft">
-                <div
-                  aria-label="Placeholder com as iniciais NC para Neid Cardoso"
-                  className="mx-auto flex size-24 items-center justify-center rounded-full bg-brand-purple-soft text-2xl font-bold text-brand-purple"
-                >
-                  NC
-                </div>
+                <img
+                  src={neidPhoto.url}
+                  alt="Fotografia de Neid Cardoso, psicóloga na Diversamente"
+                  width={192}
+                  height={192}
+                  className="mx-auto size-24 rounded-full object-cover"
+                />
                 <h3 className="mt-4 text-lg font-bold">Neid Cardoso</h3>
                 <p className="mt-2 text-sm text-foreground/70">Psicóloga</p>
               </article>
