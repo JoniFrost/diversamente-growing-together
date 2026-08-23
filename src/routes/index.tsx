@@ -135,7 +135,7 @@ function Index() {
           </Reveal>
           <Reveal delay={120}>
             <img
-              src={heroImage}
+              src={heroImage.url}
               alt="Profissional e criança a brincar juntos com blocos e puzzles numa sala acolhedora"
               width={1200}
               height={1008}
