@@ -46,67 +46,20 @@ function SobreNos() {
       <section className="mx-auto max-w-3xl space-y-4 px-4 py-16 text-lg text-foreground/80">
         <Reveal>
           <p>
-            Tudo começou com algo que tínhamos em comum: o gosto por trabalhar com crianças e por
-            fazer a diferença nas suas vidas.
+            A Diversamente nasceu da vontade de criar um espaço onde as diferenças fossem
+            compreendidas, respeitadas e transformadas em oportunidades de desenvolvimento.
           </p>
           <p className="mt-4">
-            Tudo começou muito antes de existir um nome. Conhecemo-nos enquanto colegas de trabalho
-            e foi aí que percebemos que partilhávamos a mesma paixão e muitos dos mesmos valores.
+            Acreditamos que a intervenção deve acontecer de forma próxima, positiva e funcional,
+            envolvendo não apenas a criança, mas também a família, a escola e os restantes contextos
+            importantes da sua vida.
           </p>
           <p className="mt-4">
-            Os nossos percursos mudaram e surgiu a oportunidade de trabalharmos juntas. Foi aí que
-            começámos a construir o nosso caminho enquanto equipa.
-          </p>
-          <p className="mt-4">
-            Ao longo dos anos, partilhámos desafios e aprendizagens. E percebemos, cada vez mais, o
-            impacto que o nosso trabalho pode ter na vida de cada criança.
-          </p>
-          <p className="mt-4">
-            Depois de alguns anos juntas, sentimos que estava na altura de dar o próximo passo. Criar
-            um projeto que fosse verdadeiramente nosso.
-          </p>
-          <p className="mt-4">
-            Um projeto que junta a nossa experiência, aquilo em que acreditamos e, acima de tudo, a
-            vontade de continuar a fazer parte de cada pequena grande conquista.
+            O nosso objetivo é ajudar cada criança a desenvolver competências que aumentem a sua
+            comunicação, autonomia, participação e qualidade de vida.
           </p>
         </Reveal>
       </section>
-
-      <section className="mx-auto max-w-6xl px-4 pb-16">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <Reveal>
-            <div className="h-full rounded-3xl bg-brand-blue-soft p-8">
-              <h3 className="text-xl font-bold">Os nossos caminhos cruzaram-se</h3>
-            </div>
-          </Reveal>
-          <Reveal delay={80}>
-            <div className="h-full rounded-3xl bg-brand-green-soft p-8">
-              <h3 className="text-xl font-bold">3</h3>
-            </div>
-          </Reveal>
-          <Reveal delay={160}>
-            <div className="h-full rounded-3xl bg-brand-yellow-soft p-8">
-              <h3 className="text-xl font-bold">Mais tarde, tornámo-nos uma equipa</h3>
-            </div>
-          </Reveal>
-          <Reveal delay={240}>
-            <div className="h-full rounded-3xl bg-brand-coral-soft p-8">
-              <h3 className="text-xl font-bold">Crescemos juntas</h3>
-            </div>
-          </Reveal>
-          <Reveal delay={320}>
-            <div className="h-full rounded-3xl bg-brand-lilac-soft p-8">
-              <h3 className="text-xl font-bold">Nasceu a vontade de criar algo nosso</h3>
-            </div>
-          </Reveal>
-          <Reveal delay={400}>
-            <div className="h-full rounded-3xl bg-brand-blue-soft p-8">
-              <h3 className="text-xl font-bold">Nasceu a Diversamente</h3>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
 
       <section className="mx-auto grid max-w-6xl gap-6 px-4 pb-16 md:grid-cols-2">
         <Reveal>
