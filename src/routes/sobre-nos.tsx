@@ -43,21 +43,15 @@ function SobreNos() {
         title="Diferentes formas de aprender. O mesmo direito a participar."
       />
 
-      <section className="mx-auto max-w-3xl space-y-4 px-4 py-16 text-lg text-foreground/80">
+      <section className="mx-auto max-w-3xl space-y-6 px-4 py-16 text-lg text-foreground/80">
         <Reveal>
-          <p>
-            A Diversamente nasceu da vontade de criar um espaço onde as diferenças fossem
-            compreendidas, respeitadas e transformadas em oportunidades de desenvolvimento.
-          </p>
-          <p className="mt-4">
-            Acreditamos que a intervenção deve acontecer de forma próxima, positiva e funcional,
-            envolvendo não apenas a criança, mas também a família, a escola e os restantes contextos
-            importantes da sua vida.
-          </p>
-          <p className="mt-4">
-            O nosso objetivo é ajudar cada criança a desenvolver competências que aumentem a sua
-            comunicação, autonomia, participação e qualidade de vida.
-          </p>
+          <p>Tudo começou muito antes de existir um nome. Tudo começou com algo que tínhamos em comum: o gosto por trabalhar com crianças e por fazer a diferença nas suas vidas.</p>
+          <p>Os nossos caminhos cruzaram-se. Conhecemo-nos enquanto colegas de trabalho e foi aí que percebemos que partilhávamos a mesma paixão e muitos dos mesmos valores.</p>
+          <p>Mais tarde, tornámo-nos uma equipa. Os nossos percursos mudaram e surgiu a oportunidade de trabalharmos juntas. Foi aí que começámos a construir o nosso caminho enquanto equipa.</p>
+          <p>Crescemos juntas. Ao longo dos anos, partilhámos desafios e aprendizagens. E percebemos, cada vez mais, o impacto que o nosso trabalho pode ter na vida de cada criança.</p>
+          <p>Nasceu a vontade de criar algo nosso. Depois de alguns anos juntas, sentimos que estava na altura de dar o próximo passo. Criar um projeto que fosse verdadeiramente nosso.</p>
+          <p className="text-xl font-semibold text-foreground">Nasceu a Diversamente.</p>
+          <p>Um projeto que junta a nossa experiência, aquilo em que acreditamos e, acima de tudo, a vontade de continuar a fazer parte de cada pequena grande conquista.</p>
         </Reveal>
       </section>
 
