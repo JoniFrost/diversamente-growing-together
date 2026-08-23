@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
-import heroImage from "@/assets/hero-diversamente.jpg";
+import heroImage from "@/assets/hero-diversamente.jpg.asset.json";
 
 const title = "Diversamente — Clínica de desenvolvimento infantil e Terapia ABA";
 const description =
@@ -135,7 +135,7 @@ function Index() {
           </Reveal>
           <Reveal delay={120}>
             <img
-              src={heroImage}
+              src={heroImage.url}
               alt="Profissional e criança a brincar juntos com blocos e puzzles numa sala acolhedora"
               width={1200}
               height={1008}
