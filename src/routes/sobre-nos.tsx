@@ -37,7 +37,100 @@ const valores = [
   "Valorização das famílias",
 ];
 
+
+const colorMap = {
+  coral: {
+    soft: "bg-brand-coral-soft",
+    solid: "bg-brand-coral",
+    text: "text-[oklch(0.67_0.13_30)]",
+    border: "border-brand-coral/25",
+  },
+  lilac: {
+    soft: "bg-brand-lilac-soft",
+    solid: "bg-brand-lilac",
+    text: "text-[oklch(0.62_0.1_300)]",
+    border: "border-brand-lilac/25",
+  },
+  blue: {
+    soft: "bg-brand-blue-soft",
+    solid: "bg-brand-blue",
+    text: "text-[oklch(0.62_0.11_240)]",
+    border: "border-brand-blue/25",
+  },
+  green: {
+    soft: "bg-brand-green-soft",
+    solid: "bg-brand-green",
+    text: "text-[oklch(0.62_0.1_160)]",
+    border: "border-brand-green/25",
+  },
+  yellow: {
+    soft: "bg-brand-yellow-soft",
+    solid: "bg-brand-yellow",
+    text: "text-[oklch(0.55_0.1_80)]",
+    border: "border-brand-yellow/40",
+  },
+};
+
+function TimelineItem({
+  number,
+  icon,
+  title,
+  text,
+  color,
+  align,
+}: {
+  number: string;
+  icon: React.ReactNode;
+  title: string;
+  text: string;
+  color: keyof typeof colorMap;
+  align: "left" | "right";
+}) {
+  const c = colorMap[color];
+  const isLeft = align === "left";
+
+  return (
+    <Reveal>
+      <div
+        className={`relative flex items-start gap-6 md:items-center ${
+          isLeft ? "md:flex-row" : "md:flex-row-reverse"
+        }`}
+      >
+        {/* Marcador da timeline */}
+        <div
+          className={`absolute left-8 top-1/2 z-10 hidden size-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full text-white shadow-soft md:flex ${c.solid}`}
+        >
+          {icon}
+        </div>
+
+        <div
+          className={`relative z-10 flex size-16 shrink-0 items-center justify-center rounded-full text-white shadow-soft md:hidden ${c.solid}`}
+        >
+          <span className="font-display text-2xl font-bold">{number}</span>
+        </div>
+
+        <div
+          className={`flex-1 rounded-3xl border p-6 md:w-5/12 md:flex-none ${c.soft} ${c.border}`}
+        >
+          <div className="flex items-center gap-3">
+            <span
+              className={`flex size-7 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white md:hidden ${c.solid}`}
+            >
+              {icon}
+            </span>
+            <h3 className={`font-display text-xl font-bold ${c.text}`}>
+              {title}
+            </h3>
+          </div>
+          <p className="mt-2 text-foreground/80">{text}</p>
+        </div>
+      </div>
+    </Reveal>
+  );
+}
+
 function SobreNos() {
+
   return (
     <>
       <PageHeader
