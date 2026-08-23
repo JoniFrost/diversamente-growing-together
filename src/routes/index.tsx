@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
-import heroImage from "@/assets/hero-diversamente.jpg";
+import heroImage from "@/assets/hero-diversamente.jpg.asset.json";
 
 const title = "Diversamente — Clínica de desenvolvimento infantil e Terapia ABA";
 const description =
