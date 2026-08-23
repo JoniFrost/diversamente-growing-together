@@ -45,17 +45,88 @@ function SobreNos() {
         title="Diferentes formas de aprender. O mesmo direito a participar."
       />
 
-      <section className="mx-auto max-w-3xl space-y-6 px-4 py-16 text-lg text-foreground/80">
+      <section className="mx-auto max-w-4xl px-4 py-16">
         <Reveal>
-          <p>Tudo começou muito antes de existir um nome. Tudo começou com algo que tínhamos em comum: o gosto por trabalhar com crianças e por fazer a diferença nas suas vidas.</p>
-          <p>Os nossos caminhos cruzaram-se. Conhecemo-nos enquanto colegas de trabalho e foi aí que percebemos que partilhávamos a mesma paixão e muitos dos mesmos valores.</p>
-          <p>Mais tarde, tornámo-nos uma equipa. Os nossos percursos mudaram e surgiu a oportunidade de trabalharmos juntas. Foi aí que começámos a construir o nosso caminho enquanto equipa.</p>
-          <p>Crescemos juntas. Ao longo dos anos, partilhámos desafios e aprendizagens. E percebemos, cada vez mais, o impacto que o nosso trabalho pode ter na vida de cada criança.</p>
-          <p>Nasceu a vontade de criar algo nosso. Depois de alguns anos juntas, sentimos que estava na altura de dar o próximo passo. Criar um projeto que fosse verdadeiramente nosso.</p>
-          <p className="text-xl font-semibold text-foreground">Nasceu a Diversamente.</p>
-          <p>Um projeto que junta a nossa experiência, aquilo em que acreditamos e, acima de tudo, a vontade de continuar a fazer parte de cada pequena grande conquista.</p>
+          <h2 className="text-center font-display text-3xl font-bold tracking-tight md:text-4xl">
+            A nossa história
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-foreground/70">
+            Os momentos que deram origem à Diversamente.
+          </p>
         </Reveal>
+
+        <div className="relative mt-12 space-y-8 md:mt-16">
+          {/* Linha vertical da timeline */}
+          <div
+            className="absolute left-8 top-0 h-full w-1 rounded-full md:left-1/2 md:-translate-x-1/2"
+            style={{
+              background:
+                "linear-gradient(180deg, var(--brand-coral-soft), var(--brand-lilac-soft) 50%, var(--brand-blue-soft))",
+            }}
+            aria-hidden="true"
+          />
+
+          <TimelineItem
+            number="1"
+            icon={<Heart className="size-5" />}
+            title="Tudo começou muito antes de existir um nome."
+            text="Tudo começou com algo que tínhamos em comum: o gosto por trabalhar com crianças e por fazer a diferença nas suas vidas."
+            color="coral"
+            align="left"
+          />
+
+          <TimelineItem
+            number="2"
+            icon={<Users className="size-5" />}
+            title="Os nossos caminhos cruzaram-se."
+            text="Conhecemo-nos enquanto colegas de trabalho e foi aí que percebemos que partilhávamos a mesma paixão e muitos dos mesmos valores."
+            color="lilac"
+            align="right"
+          />
+
+          <TimelineItem
+            number="3"
+            icon={<Puzzle className="size-5" />}
+            title="Mais tarde, tornámo-nos uma equipa."
+            text="Os nossos percursos mudaram e surgiu a oportunidade de trabalharmos juntas. Foi aí que começámos a construir o nosso caminho enquanto equipa."
+            color="blue"
+            align="left"
+          />
+
+          <TimelineItem
+            number="4"
+            icon={<Lightbulb className="size-5" />}
+            title="Crescemos juntas."
+            text="Ao longo dos anos, partilhámos desafios e aprendizagens. E percebemos, cada vez mais, o impacto que o nosso trabalho pode ter na vida de cada criança."
+            color="green"
+            align="right"
+          />
+
+          <TimelineItem
+            number="5"
+            icon={<Star className="size-5" />}
+            title="Nasceu a vontade de criar algo nosso."
+            text="Depois de alguns anos juntas, sentimos que estava na altura de dar o próximo passo. Criar um projeto que fosse verdadeiramente nosso."
+            color="yellow"
+            align="left"
+          />
+
+          <Reveal>
+            <div className="relative ml-20 rounded-3xl border-2 border-dashed border-brand-coral/40 bg-brand-coral-soft p-8 text-center md:mx-auto md:max-w-2xl md:ml-0">
+              <div className="absolute -left-16 top-1/2 flex size-12 -translate-y-1/2 items-center justify-center rounded-full bg-brand-coral text-white shadow-soft md:-left-16">
+                <Sparkles className="size-6" />
+              </div>
+              <h3 className="font-display text-2xl font-bold text-foreground">
+                Nasceu a Diversamente.
+              </h3>
+              <p className="mx-auto mt-3 max-w-lg text-foreground/80">
+                Um projeto que junta a nossa experiência, aquilo em que acreditamos e, acima de tudo, a vontade de continuar a fazer parte de cada pequena grande conquista.
+              </p>
+            </div>
+          </Reveal>
+        </div>
       </section>
+
 
       <section className="mx-auto grid max-w-6xl gap-6 px-4 pb-16 md:grid-cols-2">
         <Reveal>
