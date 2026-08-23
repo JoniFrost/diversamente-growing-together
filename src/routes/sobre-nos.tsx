@@ -5,6 +5,8 @@ import { PageHeader } from "@/components/site/PageHeader";
 import adrianaPhoto from "@/assets/adriana-madeira.jpg.asset.json";
 import inesPhoto from "@/assets/ines-costa.png.asset.json";
 import neidPhoto from "@/assets/neid-cardoso.jpg.asset.json";
+import { Heart, Users, Puzzle, Lightbulb, Star, Sparkles } from "lucide-react";
+
 
 const title = "Sobre nós — Diversamente";
 const description =
@@ -35,7 +37,100 @@ const valores = [
   "Valorização das famílias",
 ];
 
+
+const colorMap = {
+  coral: {
+    soft: "bg-brand-coral-soft",
+    solid: "bg-brand-coral",
+    text: "text-[oklch(0.67_0.13_30)]",
+    border: "border-brand-coral/25",
+  },
+  lilac: {
+    soft: "bg-brand-lilac-soft",
+    solid: "bg-brand-lilac",
+    text: "text-[oklch(0.62_0.1_300)]",
+    border: "border-brand-lilac/25",
+  },
+  blue: {
+    soft: "bg-brand-blue-soft",
+    solid: "bg-brand-blue",
+    text: "text-[oklch(0.62_0.11_240)]",
+    border: "border-brand-blue/25",
+  },
+  green: {
+    soft: "bg-brand-green-soft",
+    solid: "bg-brand-green",
+    text: "text-[oklch(0.62_0.1_160)]",
+    border: "border-brand-green/25",
+  },
+  yellow: {
+    soft: "bg-brand-yellow-soft",
+    solid: "bg-brand-yellow",
+    text: "text-[oklch(0.55_0.1_80)]",
+    border: "border-brand-yellow/40",
+  },
+};
+
+function TimelineItem({
+  number,
+  icon,
+  title,
+  text,
+  color,
+  align,
+}: {
+  number: string;
+  icon: React.ReactNode;
+  title: string;
+  text: string;
+  color: keyof typeof colorMap;
+  align: "left" | "right";
+}) {
+  const c = colorMap[color];
+  const isLeft = align === "left";
+
+  return (
+    <Reveal>
+      <div
+        className={`relative flex items-start gap-6 md:items-center ${
+          isLeft ? "md:flex-row" : "md:flex-row-reverse"
+        }`}
+      >
+        {/* Marcador da timeline */}
+        <div
+          className={`absolute left-8 top-1/2 z-10 hidden size-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full text-white shadow-soft md:flex ${c.solid}`}
+        >
+          {icon}
+        </div>
+
+        <div
+          className={`relative z-10 flex size-16 shrink-0 items-center justify-center rounded-full text-white shadow-soft md:hidden ${c.solid}`}
+        >
+          <span className="font-display text-2xl font-bold">{number}</span>
+        </div>
+
+        <div
+          className={`flex-1 rounded-3xl border p-6 md:w-5/12 md:flex-none ${c.soft} ${c.border}`}
+        >
+          <div className="flex items-center gap-3">
+            <span
+              className={`flex size-7 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white md:hidden ${c.solid}`}
+            >
+              {icon}
+            </span>
+            <h3 className={`font-display text-xl font-bold ${c.text}`}>
+              {title}
+            </h3>
+          </div>
+          <p className="mt-2 text-foreground/80">{text}</p>
+        </div>
+      </div>
+    </Reveal>
+  );
+}
+
 function SobreNos() {
+
   return (
     <>
       <PageHeader
@@ -43,17 +138,88 @@ function SobreNos() {
         title="Diferentes formas de aprender. O mesmo direito a participar."
       />
 
-      <section className="mx-auto max-w-3xl space-y-6 px-4 py-16 text-lg text-foreground/80">
+      <section className="mx-auto max-w-4xl px-4 py-16">
         <Reveal>
-          <p>Tudo começou muito antes de existir um nome. Tudo começou com algo que tínhamos em comum: o gosto por trabalhar com crianças e por fazer a diferença nas suas vidas.</p>
-          <p>Os nossos caminhos cruzaram-se. Conhecemo-nos enquanto colegas de trabalho e foi aí que percebemos que partilhávamos a mesma paixão e muitos dos mesmos valores.</p>
-          <p>Mais tarde, tornámo-nos uma equipa. Os nossos percursos mudaram e surgiu a oportunidade de trabalharmos juntas. Foi aí que começámos a construir o nosso caminho enquanto equipa.</p>
-          <p>Crescemos juntas. Ao longo dos anos, partilhámos desafios e aprendizagens. E percebemos, cada vez mais, o impacto que o nosso trabalho pode ter na vida de cada criança.</p>
-          <p>Nasceu a vontade de criar algo nosso. Depois de alguns anos juntas, sentimos que estava na altura de dar o próximo passo. Criar um projeto que fosse verdadeiramente nosso.</p>
-          <p className="text-xl font-semibold text-foreground">Nasceu a Diversamente.</p>
-          <p>Um projeto que junta a nossa experiência, aquilo em que acreditamos e, acima de tudo, a vontade de continuar a fazer parte de cada pequena grande conquista.</p>
+          <h2 className="text-center font-display text-3xl font-bold tracking-tight md:text-4xl">
+            A nossa história
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-foreground/70">
+            Os momentos que deram origem à Diversamente.
+          </p>
         </Reveal>
+
+        <div className="relative mt-12 space-y-8 md:mt-16">
+          {/* Linha vertical da timeline */}
+          <div
+            className="absolute left-8 top-0 h-full w-1 rounded-full md:left-1/2 md:-translate-x-1/2"
+            style={{
+              background:
+                "linear-gradient(180deg, var(--brand-coral-soft), var(--brand-lilac-soft) 50%, var(--brand-blue-soft))",
+            }}
+            aria-hidden="true"
+          />
+
+          <TimelineItem
+            number="1"
+            icon={<Heart className="size-5" />}
+            title="Tudo começou muito antes de existir um nome."
+            text="Tudo começou com algo que tínhamos em comum: o gosto por trabalhar com crianças e por fazer a diferença nas suas vidas."
+            color="coral"
+            align="left"
+          />
+
+          <TimelineItem
+            number="2"
+            icon={<Users className="size-5" />}
+            title="Os nossos caminhos cruzaram-se."
+            text="Conhecemo-nos enquanto colegas de trabalho e foi aí que percebemos que partilhávamos a mesma paixão e muitos dos mesmos valores."
+            color="lilac"
+            align="right"
+          />
+
+          <TimelineItem
+            number="3"
+            icon={<Puzzle className="size-5" />}
+            title="Mais tarde, tornámo-nos uma equipa."
+            text="Os nossos percursos mudaram e surgiu a oportunidade de trabalharmos juntas. Foi aí que começámos a construir o nosso caminho enquanto equipa."
+            color="blue"
+            align="left"
+          />
+
+          <TimelineItem
+            number="4"
+            icon={<Lightbulb className="size-5" />}
+            title="Crescemos juntas."
+            text="Ao longo dos anos, partilhámos desafios e aprendizagens. E percebemos, cada vez mais, o impacto que o nosso trabalho pode ter na vida de cada criança."
+            color="green"
+            align="right"
+          />
+
+          <TimelineItem
+            number="5"
+            icon={<Star className="size-5" />}
+            title="Nasceu a vontade de criar algo nosso."
+            text="Depois de alguns anos juntas, sentimos que estava na altura de dar o próximo passo. Criar um projeto que fosse verdadeiramente nosso."
+            color="yellow"
+            align="left"
+          />
+
+          <Reveal>
+            <div className="relative ml-20 rounded-3xl border-2 border-dashed border-brand-coral/40 bg-brand-coral-soft p-8 text-center md:mx-auto md:max-w-2xl md:ml-0">
+              <div className="absolute -left-16 top-1/2 flex size-12 -translate-y-1/2 items-center justify-center rounded-full bg-brand-coral text-white shadow-soft md:-left-16">
+                <Sparkles className="size-6" />
+              </div>
+              <h3 className="font-display text-2xl font-bold text-foreground">
+                Nasceu a Diversamente.
+              </h3>
+              <p className="mx-auto mt-3 max-w-lg text-foreground/80">
+                Um projeto que junta a nossa experiência, aquilo em que acreditamos e, acima de tudo, a vontade de continuar a fazer parte de cada pequena grande conquista.
+              </p>
+            </div>
+          </Reveal>
+        </div>
       </section>
+
 
       <section className="mx-auto grid max-w-6xl gap-6 px-4 pb-16 md:grid-cols-2">
         <Reveal>
