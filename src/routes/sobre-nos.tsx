@@ -46,16 +46,17 @@ function SobreNos() {
       <section className="mx-auto max-w-3xl space-y-4 px-4 py-16 text-lg text-foreground/80">
         <Reveal>
           <p>
-            Tudo começou muito antes de existir um nome. Tudo começou com algo que tínhamos em comum: o gosto por trabalhar com crianças e por fazer a diferença nas suas vidas.
+            A Diversamente nasceu da vontade de criar um espaço onde as diferenças fossem
+            compreendidas, respeitadas e transformadas em oportunidades de desenvolvimento.
           </p>
           <p className="mt-4">
-            Os nossos caminhos cruzaram-se. Conhecemo-nos enquanto colegas de trabalho e foi aí que percebemos que partilhávamos a mesma paixão e muitos dos mesmos valores.
+            Acreditamos que a intervenção deve acontecer de forma próxima, positiva e funcional,
+            envolvendo não apenas a criança, mas também a família, a escola e os restantes contextos
+            importantes da sua vida.
           </p>
           <p className="mt-4">
-            Mais tarde, tornámo-nos uma equipa. Os nossos percursos mudaram e surgiu a oportunidade de trabalharmos juntas. Foi aí que começámos a construir o nosso caminho enquanto equipa.
-          </p>
-          <p className="mt-4">
-            Crescemos juntas. Ao longo dos anos, partilhámos desafios e aprendizagens. E percebemos, cada vez mais, o impacto que o nosso trabalho pode ter na vida de cada criança.
+            O nosso objetivo é ajudar cada criança a desenvolver competências que aumentem a sua
+            comunicação, autonomia, participação e qualidade de vida.
           </p>
         </Reveal>
       </section>
