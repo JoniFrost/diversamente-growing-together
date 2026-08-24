@@ -112,20 +112,14 @@ function TimelineItem({
 
 
         <div
-          className={`flex-1 rounded-3xl border p-6 md:w-5/12 md:flex-none ${c.soft} ${c.border}`}
+          className={`flex-1 rounded-3xl border p-5 sm:p-6 md:w-5/12 md:flex-none ${c.soft} ${c.border}`}
         >
-          <div className="flex items-center gap-3">
-            <span
-              className={`flex size-7 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white md:hidden ${c.solid}`}
-            >
-              {icon}
-            </span>
-            <h3 className={`font-display text-xl font-bold ${c.text}`}>
-              {title}
-            </h3>
-          </div>
+          <h3 className={`font-display text-lg font-bold sm:text-xl ${c.text}`}>
+            {title}
+          </h3>
           <p className="mt-2 text-foreground/80">{text}</p>
         </div>
+
       </div>
     </Reveal>
   );
