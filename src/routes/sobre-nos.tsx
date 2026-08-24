@@ -42,31 +42,31 @@ const colorMap = {
   coral: {
     soft: "bg-brand-coral-soft",
     solid: "bg-brand-coral",
-    text: "text-[oklch(0.67_0.13_30)]",
+    text: "text-[oklch(0.55_0.14_347.5)]",
     border: "border-brand-coral/25",
   },
   lilac: {
     soft: "bg-brand-lilac-soft",
     solid: "bg-brand-lilac",
-    text: "text-[oklch(0.62_0.1_300)]",
+    text: "text-[oklch(0.52_0.14_329.5)]",
     border: "border-brand-lilac/25",
   },
   blue: {
     soft: "bg-brand-blue-soft",
     solid: "bg-brand-blue",
-    text: "text-[oklch(0.62_0.11_240)]",
+    text: "text-[oklch(0.52_0.11_231.8)]",
     border: "border-brand-blue/25",
   },
   green: {
     soft: "bg-brand-green-soft",
     solid: "bg-brand-green",
-    text: "text-[oklch(0.62_0.1_160)]",
+    text: "text-[oklch(0.46_0.1_231.8)]",
     border: "border-brand-green/25",
   },
   yellow: {
     soft: "bg-brand-yellow-soft",
     solid: "bg-brand-yellow",
-    text: "text-[oklch(0.55_0.1_80)]",
+    text: "text-[oklch(0.55_0.12_98)]",
     border: "border-brand-yellow/40",
   },
 };
@@ -98,14 +98,14 @@ function TimelineItem({
       >
         {/* Marcador da timeline — desktop: centrado na linha; mobile: bolha à esquerda */}
         <div
-          className={`absolute top-1/2 z-10 hidden size-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full text-white shadow-soft md:flex ${c.solid}`}
+          className={`absolute top-1/2 z-10 hidden size-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full text-foreground shadow-soft md:flex ${c.solid}`}
           style={{ left: "50%" }}
         >
           {icon}
         </div>
 
         <div
-          className={`relative z-10 flex size-16 shrink-0 items-center justify-center rounded-full text-white shadow-soft md:hidden ${c.solid}`}
+          className={`relative z-10 flex size-16 shrink-0 items-center justify-center rounded-full text-foreground shadow-soft md:hidden ${c.solid}`}
         >
           <span className="font-display text-2xl font-bold">{number}</span>
         </div>
@@ -202,7 +202,7 @@ function SobreNos() {
 
           <Reveal>
             <div className="relative ml-20 rounded-3xl border-2 border-dashed border-brand-coral/40 bg-brand-coral-soft p-8 text-center md:mx-auto md:max-w-2xl md:ml-0">
-              <div className="absolute -left-16 top-1/2 flex size-12 -translate-y-1/2 items-center justify-center rounded-full bg-brand-coral text-white shadow-soft md:-left-16">
+              <div className="absolute -left-16 top-1/2 flex size-12 -translate-y-1/2 items-center justify-center rounded-full bg-brand-coral text-foreground shadow-soft md:-left-16">
                 <Sparkles className="size-6" />
               </div>
               <h3 className="font-display text-2xl font-bold text-foreground">
