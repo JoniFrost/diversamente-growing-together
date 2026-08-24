@@ -96,9 +96,10 @@ function TimelineItem({
           isLeft ? "md:flex-row" : "md:flex-row-reverse"
         }`}
       >
-        {/* Marcador da timeline */}
+        {/* Marcador da timeline — desktop: centrado na linha; mobile: bolha à esquerda */}
         <div
-          className={`absolute left-8 top-1/2 z-10 hidden size-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full text-white shadow-soft md:flex ${c.solid}`}
+          className={`absolute top-1/2 z-10 hidden size-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full text-white shadow-soft md:flex ${c.solid}`}
+          style={{ left: "50%" }}
         >
           {icon}
         </div>
@@ -109,21 +110,16 @@ function TimelineItem({
           <span className="font-display text-2xl font-bold">{number}</span>
         </div>
 
+
         <div
-          className={`flex-1 rounded-3xl border p-6 md:w-5/12 md:flex-none ${c.soft} ${c.border}`}
+          className={`flex-1 rounded-3xl border p-5 sm:p-6 md:w-5/12 md:flex-none ${c.soft} ${c.border}`}
         >
-          <div className="flex items-center gap-3">
-            <span
-              className={`flex size-7 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white md:hidden ${c.solid}`}
-            >
-              {icon}
-            </span>
-            <h3 className={`font-display text-xl font-bold ${c.text}`}>
-              {title}
-            </h3>
-          </div>
+          <h3 className={`font-display text-lg font-bold sm:text-xl ${c.text}`}>
+            {title}
+          </h3>
           <p className="mt-2 text-foreground/80">{text}</p>
         </div>
+
       </div>
     </Reveal>
   );
