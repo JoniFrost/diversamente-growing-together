@@ -59,7 +59,6 @@ const toneStyles: Record<
   {
     solid: string;
     soft: string;
-    text: string;
     border: string;
     shadow: string;
   }
@@ -67,35 +66,30 @@ const toneStyles: Record<
   blue: {
     solid: "bg-brand-blue",
     soft: "bg-brand-blue-soft",
-    text: "text-brand-blue",
     border: "border-brand-blue",
     shadow: "shadow-brand-blue/10",
   },
   yellow: {
     solid: "bg-brand-yellow",
     soft: "bg-brand-yellow-soft",
-    text: "text-foreground",
     border: "border-brand-yellow",
     shadow: "shadow-brand-yellow/10",
   },
   lilac: {
     solid: "bg-brand-lilac",
     soft: "bg-brand-lilac-soft",
-    text: "text-brand-lilac",
     border: "border-brand-lilac",
     shadow: "shadow-brand-lilac/10",
   },
   coral: {
     solid: "bg-brand-coral",
     soft: "bg-brand-coral-soft",
-    text: "text-brand-coral",
     border: "border-brand-coral",
     shadow: "shadow-brand-coral/10",
   },
   green: {
     solid: "bg-brand-green",
     soft: "bg-brand-green-soft",
-    text: "text-brand-green",
     border: "border-brand-green",
     shadow: "shadow-brand-green/10",
   },
