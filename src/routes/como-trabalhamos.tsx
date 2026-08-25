@@ -74,7 +74,7 @@ const toneStyles: Record<
   yellow: {
     solid: "bg-brand-yellow",
     soft: "bg-brand-yellow-soft",
-    text: "text-brand-yellow-foreground",
+    text: "text-foreground",
     border: "border-brand-yellow",
     shadow: "shadow-brand-yellow/10",
   },
