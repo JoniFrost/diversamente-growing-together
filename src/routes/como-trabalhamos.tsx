@@ -135,9 +135,7 @@ function StepCard({
         >
           {index + 1}
         </div>
-        <h3
-          className={`mt-3 whitespace-nowrap font-display text-xl font-bold ${tone.text} hidden md:block`}
-        >
+        <h3 className="mt-3 hidden whitespace-nowrap font-display text-xl font-bold text-foreground md:block">
           {etapa.shortTitle}
         </h3>
       </div>
