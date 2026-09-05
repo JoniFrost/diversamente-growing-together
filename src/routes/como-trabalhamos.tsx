@@ -110,25 +110,29 @@ function StepCard({
   return (
     <Reveal
       as="li"
-      className="group relative flex w-full flex-col items-center md:flex-row md:items-stretch"
+      className="group grid w-full grid-cols-1 items-center gap-4 md:grid-cols-[1fr_auto_1fr]"
       delay={index * 100}
     >
-      {/* Description card — alternates left/right on desktop */}
+      {/* Left slot */}
       <div
-        className={`flex w-full md:w-1/2 ${isLeft ? "md:order-1 md:justify-end md:pr-12" : "md:order-3 md:justify-start md:pl-12"}`}
+        className={`flex w-full ${isLeft ? "md:justify-end md:pr-10" : "md:order-3 md:justify-start md:pl-10"}`}
       >
-        <div
-          className={`max-w-md rounded-3xl border-b-4 ${tone.border} bg-card p-6 shadow-soft ${tone.shadow} transition-transform duration-300 group-hover:-translate-y-1`}
-        >
-          <h3 className="font-display text-xl font-bold text-foreground md:hidden">
-            {etapa.title}
-          </h3>
-          <p className="mt-2 text-foreground/80 md:mt-0">{etapa.text}</p>
-        </div>
+        {isLeft ? (
+          <div
+            className={`max-w-md rounded-3xl border-b-4 ${tone.border} bg-card p-6 shadow-soft ${tone.shadow} transition-transform duration-300 group-hover:-translate-y-1`}
+          >
+            <h3 className="font-display text-xl font-bold text-foreground md:hidden">
+              {etapa.title}
+            </h3>
+            <p className="mt-2 text-foreground/80 md:mt-0">{etapa.text}</p>
+          </div>
+        ) : (
+          <div aria-hidden="true" />
+        )}
       </div>
 
       {/* Center marker */}
-      <div className="relative z-10 flex flex-col items-center py-4 md:order-2 md:w-16 md:py-0">
+      <div className="relative z-10 flex flex-col items-center py-2 md:order-2 md:py-0">
         <div
           className={`flex size-20 shrink-0 items-center justify-center rounded-full border-4 border-background ${tone.solid} font-display text-4xl font-extrabold text-primary-foreground shadow-soft transition-transform duration-300 group-hover:scale-110`}
           aria-hidden="true"
@@ -140,8 +144,23 @@ function StepCard({
         </h3>
       </div>
 
-      {/* Empty half for alternating layout */}
-      <div className="hidden md:block md:w-1/2" aria-hidden="true" />
+      {/* Right slot */}
+      <div
+        className={`flex w-full ${isLeft ? "md:order-3 md:justify-start md:pl-10" : "md:justify-end md:pr-10"}`}
+      >
+        {isLeft ? (
+          <div aria-hidden="true" />
+        ) : (
+          <div
+            className={`max-w-md rounded-3xl border-b-4 ${tone.border} bg-card p-6 shadow-soft ${tone.shadow} transition-transform duration-300 group-hover:-translate-y-1`}
+          >
+            <h3 className="font-display text-xl font-bold text-foreground md:hidden">
+              {etapa.title}
+            </h3>
+            <p className="mt-2 text-foreground/80 md:mt-0">{etapa.text}</p>
+          </div>
+        )}
+      </div>
     </Reveal>
   );
 }
