@@ -115,7 +115,7 @@ function StepCard({
     >
       {/* Left slot */}
       <div
-        className={`flex w-full ${isLeft ? "md:justify-end md:pr-10" : "md:order-3 md:justify-start md:pl-10"}`}
+        className={`flex w-full md:col-start-1 ${isLeft ? "md:justify-end md:pr-10" : ""}`}
       >
         {isLeft ? (
           <div
@@ -132,7 +132,7 @@ function StepCard({
       </div>
 
       {/* Center marker */}
-      <div className="relative z-10 flex items-center justify-center py-2 md:order-2 md:py-0">
+      <div className="relative z-10 flex items-center justify-center py-2 md:col-start-2 md:py-0">
         <div
           className={`flex size-20 shrink-0 items-center justify-center rounded-full border-4 border-background ${tone.solid} font-display text-4xl font-extrabold text-primary-foreground shadow-soft transition-transform duration-300 group-hover:scale-110`}
           aria-hidden="true"
@@ -143,7 +143,7 @@ function StepCard({
 
       {/* Right slot */}
       <div
-        className={`flex w-full ${isLeft ? "md:order-3 md:justify-start md:pl-10" : "md:justify-end md:pr-10"}`}
+        className={`flex w-full md:col-start-3 ${isLeft ? "" : "md:justify-start md:pl-10"}`}
       >
         {isLeft ? (
           <div aria-hidden="true" />
