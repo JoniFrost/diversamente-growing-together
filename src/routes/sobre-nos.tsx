@@ -201,11 +201,11 @@ function SobreNos() {
           />
 
           <Reveal>
-            <div className="relative ml-20 rounded-3xl border-2 border-dashed border-brand-coral/40 bg-brand-coral-soft p-8 text-center md:mx-auto md:max-w-2xl md:ml-0">
-              <div className="absolute -left-16 top-1/2 flex size-12 -translate-y-1/2 items-center justify-center rounded-full bg-brand-coral text-foreground shadow-soft md:-left-16">
+            <div className="mx-auto max-w-2xl rounded-3xl border-2 border-dashed border-brand-coral/40 bg-brand-coral-soft p-8 text-center">
+              <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-brand-coral text-foreground shadow-soft">
                 <Sparkles className="size-6" />
               </div>
-              <h3 className="font-display text-2xl font-bold text-foreground">
+              <h3 className="mt-4 font-display text-2xl font-bold text-foreground">
                 Nasceu a Diversamente.
               </h3>
               <p className="mx-auto mt-3 max-w-lg text-foreground/80">
