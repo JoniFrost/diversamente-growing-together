@@ -121,10 +121,10 @@ function StepCard({
           <div
             className={`max-w-md rounded-3xl border-b-4 ${tone.border} bg-card p-6 shadow-soft ${tone.shadow} transition-transform duration-300 group-hover:-translate-y-1`}
           >
-            <h3 className="font-display text-xl font-bold text-foreground md:hidden">
+            <h3 className="font-display text-xl font-bold text-foreground">
               {etapa.title}
             </h3>
-            <p className="mt-2 text-foreground/80 md:mt-0">{etapa.text}</p>
+            <p className="mt-2 text-foreground/80">{etapa.text}</p>
           </div>
         ) : (
           <div aria-hidden="true" />
@@ -132,16 +132,13 @@ function StepCard({
       </div>
 
       {/* Center marker */}
-      <div className="relative z-10 flex flex-col items-center py-2 md:order-2 md:py-0">
+      <div className="relative z-10 flex items-center justify-center py-2 md:order-2 md:py-0">
         <div
           className={`flex size-20 shrink-0 items-center justify-center rounded-full border-4 border-background ${tone.solid} font-display text-4xl font-extrabold text-primary-foreground shadow-soft transition-transform duration-300 group-hover:scale-110`}
           aria-hidden="true"
         >
           {index + 1}
         </div>
-        <h3 className="mt-3 hidden whitespace-nowrap font-display text-xl font-bold text-foreground md:block">
-          {etapa.shortTitle}
-        </h3>
       </div>
 
       {/* Right slot */}
@@ -154,10 +151,10 @@ function StepCard({
           <div
             className={`max-w-md rounded-3xl border-b-4 ${tone.border} bg-card p-6 shadow-soft ${tone.shadow} transition-transform duration-300 group-hover:-translate-y-1`}
           >
-            <h3 className="font-display text-xl font-bold text-foreground md:hidden">
+            <h3 className="font-display text-xl font-bold text-foreground">
               {etapa.title}
             </h3>
-            <p className="mt-2 text-foreground/80 md:mt-0">{etapa.text}</p>
+            <p className="mt-2 text-foreground/80">{etapa.text}</p>
           </div>
         )}
       </div>
