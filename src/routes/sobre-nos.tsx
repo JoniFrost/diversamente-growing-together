@@ -145,7 +145,7 @@ function SobreNos() {
         </Reveal>
 
         <div className="relative mt-12 space-y-8 md:mt-16">
-          {/* Linha vertical da timeline */}
+          {/* Linha vertical da timeline — termina no último passo */}
           <div
             className="absolute left-8 top-0 h-full w-1 rounded-full md:left-1/2 md:-translate-x-1/2"
             style={{
@@ -199,21 +199,21 @@ function SobreNos() {
             color="yellow"
             align="left"
           />
-
-          <Reveal>
-            <div className="mx-auto max-w-2xl rounded-3xl border-2 border-dashed border-brand-coral/40 bg-brand-coral-soft p-8 text-center">
-              <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-brand-coral text-foreground shadow-soft">
-                <Sparkles className="size-6" />
-              </div>
-              <h3 className="mt-4 font-display text-2xl font-bold text-foreground">
-                Nasceu a Diversamente.
-              </h3>
-              <p className="mx-auto mt-3 max-w-lg text-foreground/80">
-                Um projeto que junta a nossa experiência, aquilo em que acreditamos e, acima de tudo, a vontade de continuar a fazer parte de cada pequena grande conquista.
-              </p>
-            </div>
-          </Reveal>
         </div>
+
+        <Reveal>
+          <div className="mx-auto mt-8 max-w-2xl rounded-3xl border-2 border-dashed border-brand-coral/40 bg-brand-coral-soft p-8 text-center md:mt-10">
+            <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-brand-coral text-foreground shadow-soft">
+              <Sparkles className="size-6" />
+            </div>
+            <h3 className="mt-4 font-display text-2xl font-bold text-foreground">
+              Nasceu a Diversamente.
+            </h3>
+            <p className="mx-auto mt-3 max-w-lg text-foreground/80">
+              Um projeto que junta a nossa experiência, aquilo em que acreditamos e, acima de tudo, a vontade de continuar a fazer parte de cada pequena grande conquista.
+            </p>
+          </div>
+        </Reveal>
       </section>
 
 
