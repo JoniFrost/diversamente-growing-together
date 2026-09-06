@@ -107,7 +107,7 @@ const differentiators = [
 function Index() {
   return (
     <>
-      <section className="surface-soft">
+      <section className="hero-gradient">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 md:grid-cols-2 md:py-20">
           <Reveal>
             <p className="inline-flex items-center gap-2 rounded-full bg-card/80 px-4 py-1.5 text-sm font-semibold text-primary">
