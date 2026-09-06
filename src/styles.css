@@ -192,6 +192,17 @@
   background: var(--gradient-soft);
 }
 
+@utility hero-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--brand-blue-soft) 0%,
+    var(--brand-green-soft) 22%,
+    var(--brand-yellow-soft) 44%,
+    var(--brand-coral-soft) 70%,
+    var(--brand-lilac-soft) 100%
+  );
+}
+
 @utility shadow-soft {
   box-shadow: var(--shadow-soft);
 }
