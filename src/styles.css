@@ -84,8 +84,8 @@
   --card-foreground: oklch(0.31 0.045 256);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.31 0.045 256);
-  --primary: oklch(0.56 0.115 232);
-  --primary-foreground: oklch(0.99 0.005 232);
+  --primary: var(--brand-coral);
+  --primary-foreground: oklch(0.25 0.05 347.5);
   --secondary: oklch(0.95 0.035 232);
   --secondary-foreground: oklch(0.38 0.07 232);
   --muted: oklch(0.96 0.012 98);
@@ -96,7 +96,7 @@
   --destructive-foreground: oklch(0.99 0.005 240);
   --border: oklch(0.91 0.015 232);
   --input: oklch(0.91 0.015 232);
-  --ring: oklch(0.7 0.09 232);
+  --ring: oklch(0.81 0.128 347.5 / 50%);
 
   /* Cores retiradas diretamente do logótipo */
   --brand-blue: oklch(0.816 0.105 231.8);
