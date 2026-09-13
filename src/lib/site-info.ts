@@ -2,15 +2,15 @@ export const siteInfo = {
   name: "Diversamente",
   slogan: "Onde brincar também é aprender.",
   address: "[Morada da clínica]",
-  phone: "[Número de telefone]",
-  phoneHref: "tel:+351000000000",
-  email: "[E-mail]",
-  emailHref: "mailto:geral@diversamente.pt",
+  phone: "911 905 532",
+  phoneHref: "tel:+351911905532",
+  email: "diversamente@outlook.pt",
+  emailHref: "mailto:diversamente@outlook.pt",
   schedule: "[Horário de funcionamento]",
-  whatsapp: "[Link do WhatsApp]",
-  whatsappHref: "https://wa.me/351000000000",
-  instagram: "[Instagram]",
-  instagramHref: "https://instagram.com",
+  whatsapp: "911 905 532",
+  whatsappHref: "https://wa.me/351911905532",
+  instagram: "@diversamente.clinica",
+  instagramHref: "https://instagram.com/diversamente.clinica",
 };
 
 export const navLinks = [
