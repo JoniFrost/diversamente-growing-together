@@ -309,7 +309,7 @@ function SobreNos() {
                   className="mx-auto size-24 rounded-full object-cover"
                 />
                 <h3 className="mt-4 text-lg font-bold">Neid Cardoso</h3>
-                <p className="mt-2 text-sm text-foreground/70">Psicóloga</p>
+                <p className="mt-2 text-sm text-foreground/70">Terapeuta ABA</p>
               </article>
             </Reveal>
           </div>
