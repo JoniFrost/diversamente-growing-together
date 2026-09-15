@@ -121,7 +121,7 @@ function Index() {
     <>
       <section className="relative overflow-hidden bg-background">
         <div className="home-grid absolute inset-0 opacity-25" aria-hidden="true" />
-        <div className="relative mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-12 px-4 py-12 lg:grid-cols-12 lg:py-16">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-14 lg:grid-cols-12 lg:py-20">
           <Reveal className="z-10 lg:col-span-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-brand-green/40 bg-brand-green-soft px-4 py-2 text-xs font-bold uppercase text-foreground">
               <span className="size-2 rounded-full bg-brand-green" aria-hidden="true" />
@@ -148,7 +148,7 @@ function Index() {
               {[{ icon: Brain, label: "Terapia ABA", tone: "bg-brand-yellow-soft" }, { icon: School, label: "Acompanhamento", tone: "bg-brand-lilac-soft" }, { icon: UsersRound, label: "Famílias", tone: "bg-brand-green-soft" }].map((item, index) => (
                 <div key={item.label} className={`${item.tone} flex min-h-28 flex-col justify-between rounded-2xl border border-border/50 p-4 ${index === 1 ? "translate-y-3" : ""}`}>
                   <item.icon className="size-6" aria-hidden="true" />
-                  <span className="text-sm font-bold leading-tight">{item.label}</span>
+                  <span className="break-words text-xs font-bold leading-tight sm:text-sm">{item.label}</span>
                 </div>
               ))}
             </div>
