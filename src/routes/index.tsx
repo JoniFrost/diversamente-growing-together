@@ -216,16 +216,41 @@ function Index() {
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-12">
             {services.map((service, i) => (
               <Reveal key={service.title} delay={i * 80} className={i === 0 ? "lg:col-span-6 lg:row-span-2" : "lg:col-span-6"}>
-                <article className={`${service.tone} mosaic-lift flex h-full min-h-64 flex-col rounded-3xl border border-card/70 p-8 ${i === 0 ? "lg:min-h-[34rem] lg:justify-end" : "lg:min-h-64"}`}>
-                  <span className={`inline-flex size-12 items-center justify-center rounded-2xl ${service.accent}`}><service.icon className="size-6" aria-hidden="true" /></span>
-                  <h3 className="mt-7 text-2xl font-bold">{service.title}</h3>
-                  <p className="mt-3 max-w-xl text-base leading-relaxed text-foreground/75">{service.text}</p>
-                  <Button asChild variant="ghost" className="mt-5 w-fit rounded-full px-0 text-foreground">
-                    <Link to="/servicos">
-                      Saber mais <ArrowRight className="ml-1 size-4" aria-hidden="true" />
-                    </Link>
-                  </Button>
-                </article>
+                {i === 0 ? (
+                  <article className={`${service.tone} mosaic-lift flex h-full min-h-64 flex-col overflow-hidden rounded-3xl border border-card/70 lg:min-h-[34rem]`}>
+                    <div className="relative h-56 sm:h-64 lg:h-80">
+                      <img
+                        src={abaImage}
+                        alt="Terapeuta e criança numa sessão de Terapia ABA individual, a trabalhar com cartões e blocos coloridos"
+                        width={1024}
+                        height={1024}
+                        loading="lazy"
+                        className="absolute inset-0 h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className="flex flex-1 flex-col p-8">
+                      <span className={`inline-flex size-12 items-center justify-center rounded-2xl ${service.accent}`}><service.icon className="size-6" aria-hidden="true" /></span>
+                      <h3 className="mt-6 text-2xl font-bold">{service.title}</h3>
+                      <p className="mt-3 max-w-xl text-base leading-relaxed text-foreground/75">{service.text}</p>
+                      <Button asChild variant="ghost" className="mt-5 w-fit rounded-full px-0 text-foreground">
+                        <Link to="/servicos">
+                          Saber mais <ArrowRight className="ml-1 size-4" aria-hidden="true" />
+                        </Link>
+                      </Button>
+                    </div>
+                  </article>
+                ) : (
+                  <article className={`${service.tone} mosaic-lift flex h-full min-h-64 flex-col rounded-3xl border border-card/70 p-8 lg:min-h-64`}>
+                    <span className={`inline-flex size-12 items-center justify-center rounded-2xl ${service.accent}`}><service.icon className="size-6" aria-hidden="true" /></span>
+                    <h3 className="mt-7 text-2xl font-bold">{service.title}</h3>
+                    <p className="mt-3 max-w-xl text-base leading-relaxed text-foreground/75">{service.text}</p>
+                    <Button asChild variant="ghost" className="mt-5 w-fit rounded-full px-0 text-foreground">
+                      <Link to="/servicos">
+                        Saber mais <ArrowRight className="ml-1 size-4" aria-hidden="true" />
+                      </Link>
+                    </Button>
+                  </article>
+                )}
               </Reveal>
             ))}
             <Reveal delay={240} className="md:col-span-2 lg:col-span-12">
