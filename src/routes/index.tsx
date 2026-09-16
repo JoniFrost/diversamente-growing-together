@@ -15,6 +15,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
 import heroImage from "@/assets/hero-diversamente.jpg.asset.json";
+import abaImage from "@/assets/terapia-aba.jpg";
 
 const title = "Diversamente — Clínica de desenvolvimento infantil e Terapia ABA";
 const description =
