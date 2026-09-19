@@ -93,6 +93,13 @@ const services = [
     accent: "bg-brand-coral",
     icon: UsersRound,
   },
+  {
+    title: "Consultas de psicologia",
+    text: "Apoio psicológico para crianças, adolescentes e famílias, promovendo o bem-estar emocional, a regulação e a compreensão das necessidades de cada um.",
+    tone: "bg-brand-yellow-soft",
+    accent: "bg-brand-yellow",
+    icon: Heart,
+  },
 ];
 
 const steps = [
@@ -226,7 +233,7 @@ function Index() {
           </Reveal>
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-12">
             {services.map((service, i) => (
-              <Reveal key={service.title} delay={i * 80} className={i === 0 ? "lg:col-span-6 lg:row-span-2" : "lg:col-span-6"}>
+              <Reveal key={service.title} delay={i * 80} className="lg:col-span-6">
                 {i === 0 ? (
                   <article className={`${service.tone} mosaic-lift flex h-full min-h-64 flex-col overflow-hidden rounded-3xl border border-card/70 lg:min-h-[34rem]`}>
                     <div className="relative h-56 sm:h-64 lg:h-80">
@@ -264,11 +271,11 @@ function Index() {
                 )}
               </Reveal>
             ))}
-            <Reveal delay={240} className="md:col-span-2 lg:col-span-12">
+            <Reveal delay={320} className="md:col-span-2 lg:col-span-12">
               <article className="flex h-full flex-col justify-center rounded-3xl border-2 border-dashed border-brand-lilac/50 bg-card/70 p-7 text-center">
-                <h3 className="text-lg font-bold">Novos serviços em preparação</h3>
+                <h3 className="text-lg font-bold">Outros serviços em preparação</h3>
                 <p className="mt-2 text-sm text-foreground/70">
-                  Psicologia, terapia da fala, terapia ocupacional e avaliações.
+                  Terapia da fala, terapia ocupacional e avaliações.
                 </p>
               </article>
             </Reveal>

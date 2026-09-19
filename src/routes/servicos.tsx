@@ -72,6 +72,21 @@ const servicos = [
       "Generalização das aprendizagens para casa e comunidade",
     ],
   },
+  {
+    id: "psicologia",
+    title: "Consultas de psicologia",
+    tone: "bg-brand-yellow-soft",
+    text: "As consultas de psicologia destinam-se a crianças, adolescentes e famílias, oferecendo um espaço de escuta e acompanhamento para promover o bem-estar emocional e a compreensão das dificuldades e recursos de cada um.",
+    listTitle: "Pode incluir:",
+    items: [
+      "Avaliação e acompanhamento do desenvolvimento emocional",
+      "Apoio na regulação emocional",
+      "Aconselhamento parental",
+      "Intervenção em questões comportamentais",
+      "Colaboração com escola e outros profissionais",
+      "Acompanhamento ao longo das transições escolares e familiares",
+    ],
+  },
 ];
 
 function Servicos() {
@@ -115,8 +130,8 @@ function Servicos() {
           <div className="rounded-4xl border border-dashed border-border p-8 text-center">
             <h2 className="text-xl font-bold">Outros serviços em preparação</h2>
             <p className="mx-auto mt-2 max-w-xl text-sm text-foreground/70">
-              Estamos a preparar novas respostas, como psicologia, terapia da fala, terapia
-              ocupacional e avaliações. [Espaço reservado para atualização.]
+              Estamos a preparar novas respostas, como terapia da fala, terapia
+              ocupacional e avaliações.
             </p>
           </div>
         </Reveal>
