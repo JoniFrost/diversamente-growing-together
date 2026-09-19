@@ -1,12 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Check } from "lucide-react";
+import { Check, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
 import { PageHeader } from "@/components/site/PageHeader";
 
-const title = "Serviços — Terapia ABA, acompanhamento escolar e orientação parental";
+const title = "Serviços — Terapia ABA, Psicologia, acompanhamento escolar e orientação parental";
 const description =
-  "Terapia ABA, shadowing e acompanhamento escolar e orientação parental. Intervenção individualizada para comunicação, autonomia, aprendizagem e competências sociais.";
+  "Terapia ABA, consultas de psicologia, shadowing e acompanhamento escolar e orientação parental. Intervenção individualizada para comunicação, autonomia, aprendizagem e competências sociais.";
 
 export const Route = createFileRoute("/servicos")({
   head: () => ({

@@ -18,9 +18,9 @@ import { Reveal } from "@/components/site/Reveal";
 import heroImage from "@/assets/hero-diversamente.jpg.asset.json";
 import abaImage from "@/assets/terapia-aba.jpg";
 
-const title = "Diversamente — Clínica de desenvolvimento infantil e Terapia ABA";
+const title = "Diversamente — Clínica de desenvolvimento infantil, Terapia ABA e Psicologia";
 const description =
-  "Clínica infantil em Portugal com Terapia ABA, shadowing e acompanhamento escolar e orientação parental. Intervenções individualizadas para comunicação, autonomia e aprendizagem.";
+  "Clínica infantil em Portugal com Terapia ABA, consultas de psicologia, shadowing e acompanhamento escolar e orientação parental. Intervenções individualizadas para comunicação, autonomia e aprendizagem.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
