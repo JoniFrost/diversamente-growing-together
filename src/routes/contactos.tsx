@@ -227,6 +227,37 @@ function Contactos() {
   );
 }
 
+function MapEmbed() {
+  const apiKey = import.meta.env["VITE_LOVABLE_CONNECTOR_GOOGLE_MAPS_BROWSER_KEY"];
+  const address = siteInfo.address;
+
+  if (!apiKey) {
+    return (
+      <div className="flex h-56 items-center justify-center rounded-4xl border border-dashed border-border bg-muted/60 p-6 text-center text-sm text-foreground/70">
+        Mapa indisponível neste momento.
+      </div>
+    );
+  }
+
+  const embedUrl = `https://www.google.com/maps/embed/v1/place?key=${encodeURIComponent(apiKey)}&q=${encodeURIComponent(address)}`;
+
+  return (
+    <div className="overflow-hidden rounded-4xl border border-border/60 bg-card shadow-soft">
+      <iframe
+        title="Localização da Diversamente no Google Maps"
+        src={embedUrl}
+        width="100%"
+        height="320"
+        style={{ border: 0 }}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        className="block"
+      />
+    </div>
+  );
+}
+
 function Field({
   id,
   label,
