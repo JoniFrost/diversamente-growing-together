@@ -11,6 +11,7 @@ import {
   UsersRound,
   Brain,
   Check,
+  BookOpen,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
@@ -61,6 +62,12 @@ const areas = [
     tone: "bg-brand-coral-soft text-brand-coral",
     title: "Brincadeira e interação social",
     text: "Promoção da brincadeira funcional, partilha, imitação e interação com outras pessoas.",
+  },
+  {
+    icon: BookOpen,
+    tone: "bg-brand-lilac-soft text-brand-lilac",
+    title: "Competências académicas",
+    text: "Apoio às competências de leitura, escrita, matemática e estudo, preparando a criança para participar com sucesso no contexto escolar.",
   },
 ];
 
@@ -191,19 +198,23 @@ function Index() {
 
         <Reveal><h2 className="mt-20 text-2xl font-bold sm:text-3xl">Áreas que trabalhamos</h2></Reveal>
         <ul className="mt-8 grid auto-rows-fr gap-5 sm:grid-cols-2 lg:grid-cols-12">
-          {areas.map((area, i) => (
-            <Reveal as="li" key={area.title} delay={i * 70} className={`${i === 0 || i === 3 ? "lg:col-span-7" : "lg:col-span-5"}`}>
-              <div className="mosaic-lift flex h-full min-h-56 flex-col justify-between rounded-3xl border border-border/60 bg-card p-7">
-                <span className={`inline-flex size-12 items-center justify-center rounded-2xl ${area.tone}`}>
-                  <area.icon className="size-6" aria-hidden="true" />
-                </span>
-                <div className="mt-8">
-                  <h3 className="text-xl font-bold">{area.title}</h3>
-                  <p className="mt-2 whitespace-pre-line text-base leading-relaxed text-foreground/75">{area.text}</p>
+          {areas.map((area, i) => {
+            const spanClass =
+              i === 4 ? "lg:col-span-12" : i === 0 || i === 3 ? "lg:col-span-7" : "lg:col-span-5";
+            return (
+              <Reveal as="li" key={area.title} delay={i * 70} className={spanClass}>
+                <div className="mosaic-lift flex h-full min-h-56 flex-col justify-between rounded-3xl border border-border/60 bg-card p-7">
+                  <span className={`inline-flex size-12 items-center justify-center rounded-2xl ${area.tone}`}>
+                    <area.icon className="size-6" aria-hidden="true" />
+                  </span>
+                  <div className="mt-8">
+                    <h3 className="text-xl font-bold">{area.title}</h3>
+                    <p className="mt-2 whitespace-pre-line text-base leading-relaxed text-foreground/75">{area.text}</p>
+                  </div>
                 </div>
-              </div>
-            </Reveal>
-          ))}
+              </Reveal>
+            );
+          })}
         </ul>
       </section>
 
