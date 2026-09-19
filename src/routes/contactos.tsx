@@ -219,9 +219,7 @@ function Contactos() {
               </ul>
             </div>
 
-            <div className="flex h-56 items-center justify-center rounded-4xl border border-dashed border-border bg-muted/60 p-6 text-center text-sm text-foreground/70">
-              [Mapa do Google Maps será adicionado assim que a morada estiver definida.]
-            </div>
+            <MapEmbed />
           </div>
         </Reveal>
       </div>
