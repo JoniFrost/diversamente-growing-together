@@ -1,7 +1,7 @@
 export const siteInfo = {
   name: "Diversamente",
   slogan: "Onde brincar também é aprender.",
-  address: "[Morada da clínica]",
+  address: "Avenida Dr. António Carvalho Figueiredo, 18 B, Loures",
   phone: "911 905 532",
   phoneHref: "tel:+351911905532",
   email: "diversamente@outlook.pt",
