@@ -10,8 +10,12 @@ import {
   School,
   UsersRound,
   Brain,
-  Check,
   BookOpen,
+  User,
+  Target,
+  Users,
+  TrendingUp,
+  Clock,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
