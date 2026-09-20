@@ -318,19 +318,50 @@ function Index() {
 
       <section className="bg-brand-lilac-soft/60 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4">
-          <Reveal>
-            <h2 className="max-w-2xl text-3xl font-bold sm:text-5xl">Porque cada acompanhamento deve ser único</h2>
-          </Reveal>
-          <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {differentiators.map((item, i) => (
-              <Reveal as="li" key={item} delay={i * 60}>
-                <div className={`mosaic-lift flex h-full min-h-36 flex-col justify-between gap-5 rounded-2xl bg-card p-5 ${i === 6 ? "lg:col-span-2" : ""}`}>
-                  {i % 2 === 0 ? <Heart className="size-5 text-brand-coral" aria-hidden="true" /> : <Check className="size-5 text-brand-green" aria-hidden="true" />}
-                  <span className="font-medium leading-snug text-foreground/85">{item}</span>
-                </div>
-              </Reveal>
-            ))}
-          </ul>
+          <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-16">
+            <Reveal className="lg:col-span-4">
+              <span className="inline-flex items-center gap-2 rounded-full bg-brand-coral-soft px-4 py-2 text-sm font-bold uppercase tracking-wide text-brand-coral">
+                O nosso compromisso
+              </span>
+              <h2 className="mt-5 text-3xl font-bold sm:text-5xl">
+                Porque cada acompanhamento deve ser <span className="text-brand-blue">único</span>
+              </h2>
+              <p className="mt-5 max-w-md text-lg leading-relaxed text-foreground/75">
+                Abordagens personalizadas que respeitam a individualidade de cada criança e a dinâmica de cada família.
+              </p>
+            </Reveal>
+
+            <ul className="grid gap-5 md:grid-cols-3 lg:col-span-8">
+              {differentiators.map((item, i) => {
+                const isWide = i === 0 || i === 3 || i === 6;
+                const toneClasses: Record<string, { border: string; iconBg: string; iconText: string }> = {
+                  blue: { border: "border-b-brand-blue", iconBg: "bg-brand-blue-soft", iconText: "text-brand-blue" },
+                  green: { border: "border-b-brand-green", iconBg: "bg-brand-green-soft", iconText: "text-brand-green" },
+                  yellow: { border: "border-b-brand-yellow", iconBg: "bg-brand-yellow-soft", iconText: "text-brand-yellow" },
+                  lilac: { border: "border-b-brand-lilac", iconBg: "bg-brand-lilac-soft", iconText: "text-brand-lilac" },
+                  coral: { border: "border-b-brand-coral", iconBg: "bg-brand-coral-soft", iconText: "text-brand-coral" },
+                };
+                const t = toneClasses[item.tone];
+                return (
+                  <Reveal as="li" key={item.title} delay={i * 60} className={isWide ? "md:col-span-2" : ""}>
+                    <div
+                      className={`mosaic-lift group flex h-full flex-col gap-5 rounded-[2rem] border-b-4 ${t.border} bg-card p-6 shadow-soft sm:p-7 ${isWide ? "sm:flex-row sm:items-start sm:gap-6" : "items-center text-center"}`}
+                    >
+                      <span
+                        className={`inline-flex size-12 shrink-0 items-center justify-center rounded-2xl ${t.iconBg} ${t.iconText} transition-transform group-hover:scale-110 sm:size-14`}
+                      >
+                        <item.icon className="size-6 sm:size-7" aria-hidden="true" />
+                      </span>
+                      <div>
+                        <h3 className="text-lg font-bold sm:text-xl">{item.title}</h3>
+                        <p className="mt-2 text-sm leading-relaxed text-foreground/70 sm:text-base">{item.text}</p>
+                      </div>
+                    </div>
+                  </Reveal>
+                );
+              })}
+            </ul>
+          </div>
         </div>
       </section>
 
