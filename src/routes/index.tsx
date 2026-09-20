@@ -125,13 +125,48 @@ const steps = [
 ];
 
 const differentiators = [
-  "Intervenção individualizada",
-  "Objetivos funcionais e relevantes para o dia a dia",
-  "Trabalho em parceria com as famílias",
-  "Articulação com escolas e outros profissionais",
-  "Utilização da brincadeira como ferramenta de aprendizagem",
-  "Monitorização da evolução",
-  "Respeito pelo ritmo, necessidades e características de cada criança",
+  {
+    title: "Intervenção individualizada",
+    text: "Planos desenhados especificamente para o perfil, necessidades e ritmo de cada criança.",
+    icon: User,
+    tone: "blue",
+  },
+  {
+    title: "Objetivos funcionais e relevantes",
+    text: "Foco em metas práticas que fazem diferença no dia a dia da criança e da família.",
+    icon: Target,
+    tone: "green",
+  },
+  {
+    title: "Trabalho em parceria com as famílias",
+    text: "Acompanhamento contínuo e partilha de estratégias para aplicar em casa e na comunidade.",
+    icon: Users,
+    tone: "lilac",
+  },
+  {
+    title: "Articulação com escolas e profissionais",
+    text: "Colaboração próxima com educadores e outros técnicos para um suporte integrado.",
+    icon: School,
+    tone: "yellow",
+  },
+  {
+    title: "Brincadeira como ferramenta de aprendizagem",
+    text: "Utilizamos o brincar como estratégia natural para comunicar, aprender e relacionar.",
+    icon: Blocks,
+    tone: "coral",
+  },
+  {
+    title: "Monitorização da evolução",
+    text: "Registo sistemático dos progressos para ajustar objetivos e celebrar conquistas.",
+    icon: TrendingUp,
+    tone: "blue",
+  },
+  {
+    title: "Respeito pelo ritmo de cada criança",
+    text: "Cada caminho é único e merece o seu próprio tempo para florescer com confiança.",
+    icon: Clock,
+    tone: "green",
+  },
 ];
 
 function Index() {
