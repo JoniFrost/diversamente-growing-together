@@ -331,7 +331,7 @@ function Index() {
               </p>
             </Reveal>
 
-            <ul className="grid gap-5 md:grid-cols-3 lg:col-span-8">
+            <ul className="grid auto-rows-auto gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:col-span-8">
               {differentiators.map((item, i) => {
                 const isWide = i === 0 || i === 3 || i === 6;
                 const toneClasses: Record<string, { border: string; iconBg: string; iconText: string }> = {
@@ -343,7 +343,7 @@ function Index() {
                 };
                 const t = toneClasses[item.tone];
                 return (
-                  <Reveal as="li" key={item.title} delay={i * 60} className={isWide ? "md:col-span-2" : ""}>
+                  <Reveal as="li" key={item.title} delay={i * 60} className={isWide ? "sm:col-span-2" : ""}>
                     <div
                       className={`mosaic-lift group flex h-full flex-col gap-5 rounded-[2rem] border-b-4 ${t.border} bg-card p-6 shadow-soft sm:p-7 ${isWide ? "sm:flex-row sm:items-start sm:gap-6" : "items-center text-center"}`}
                     >
@@ -352,7 +352,7 @@ function Index() {
                       >
                         <item.icon className="size-6 sm:size-7" aria-hidden="true" />
                       </span>
-                      <div>
+                      <div className="min-w-0">
                         <h3 className="text-lg font-bold sm:text-xl">{item.title}</h3>
                         <p className="mt-2 text-sm leading-relaxed text-foreground/70 sm:text-base">{item.text}</p>
                       </div>
