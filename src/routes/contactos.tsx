@@ -46,6 +46,7 @@ const servicos = [
   "Terapia ABA",
   "Shadowing e acompanhamento escolar",
   "Orientação parental",
+  "Consultas de psicologia",
   "Ainda não sei / outra questão",
 ];
 
