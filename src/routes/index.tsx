@@ -316,7 +316,7 @@ function Index() {
         </ol>
       </section>
 
-      <section className="bg-brand-lilac-soft/60 py-16 sm:py-24">
+      <section className="scroll-mt-24 bg-brand-lilac-soft/60 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-16">
             <Reveal className="lg:col-span-4">
@@ -331,9 +331,8 @@ function Index() {
               </p>
             </Reveal>
 
-            <ul className="grid auto-rows-auto gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:col-span-8">
+            <ul className="grid auto-rows-auto gap-5 sm:grid-cols-2 lg:col-span-8">
               {differentiators.map((item, i) => {
-                const isWide = i === 0 || i === 3 || i === 6;
                 const toneClasses: Record<string, { border: string; iconBg: string; iconText: string }> = {
                   blue: { border: "border-b-brand-blue", iconBg: "bg-brand-blue-soft", iconText: "text-brand-blue" },
                   green: { border: "border-b-brand-green", iconBg: "bg-brand-green-soft", iconText: "text-brand-green" },
@@ -343,12 +342,10 @@ function Index() {
                 };
                 const t = toneClasses[item.tone];
                 return (
-                  <Reveal as="li" key={item.title} delay={i * 60} className={isWide ? "sm:col-span-2" : ""}>
-                    <div
-                      className={`mosaic-lift group flex h-full flex-col gap-5 rounded-[2rem] border-b-4 ${t.border} bg-card p-6 shadow-soft sm:p-7 ${isWide ? "sm:flex-row sm:items-start sm:gap-6" : "items-center text-center"}`}
-                    >
+                  <Reveal as="li" key={item.title} delay={i * 60}>
+                    <div className="mosaic-lift group flex h-full flex-col gap-5 rounded-[2rem] border-b-4 bg-card p-6 text-center shadow-soft sm:p-7">
                       <span
-                        className={`inline-flex size-12 shrink-0 items-center justify-center rounded-2xl ${t.iconBg} ${t.iconText} transition-transform group-hover:scale-110 sm:size-14`}
+                        className={`mx-auto inline-flex size-12 shrink-0 items-center justify-center rounded-2xl ${t.iconBg} ${t.iconText} transition-transform group-hover:scale-110 sm:size-14`}
                       >
                         <item.icon className="size-6 sm:size-7" aria-hidden="true" />
                       </span>
