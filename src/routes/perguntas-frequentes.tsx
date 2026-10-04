@@ -146,7 +146,7 @@ function Faq() {
               </Reveal>
             );
           })}
-        </div>
+        </Accordion>
 
         <Reveal>
           <div className="mt-14 text-center">
