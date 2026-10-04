@@ -42,7 +42,7 @@ const faqs = [
   },
   {
     q: "Como são realizados os pagamentos?",
-    a: "No final de cada mês, é enviado à família um mapa com as sessões realizadas, o número de horas e o valor total. Após a confirmação da informação, poderá ser efetuado o pagamento.",
+    a: "A família escolhe um pack de horas, ajustado ao que faz sentido para a criança, e o pagamento é efetuado no início de cada mês, até ao dia 5. Se alguma sessão for cancelada ou não realizada, o respetivo valor é abatido no acerto do mês seguinte.",
   },
   {
     q: "É possível acompanhar a evolução da criança?",
