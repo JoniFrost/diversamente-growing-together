@@ -70,6 +70,7 @@
   --color-brand-green-soft: var(--brand-green-soft);
   --color-brand-yellow: var(--brand-yellow);
   --color-brand-yellow-soft: var(--brand-yellow-soft);
+  --color-brand-yellow-deep: var(--brand-yellow-deep);
   --color-brand-coral: var(--brand-coral);
   --color-brand-coral-soft: var(--brand-coral-soft);
   --color-brand-lilac: var(--brand-lilac);
@@ -105,6 +106,7 @@
   --brand-green-soft: oklch(0.930 0.032 182.9);
   --brand-yellow: oklch(0.916 0.15 98);
   --brand-yellow-soft: oklch(0.97 0.06 98);
+  --brand-yellow-deep: oklch(0.76 0.12 98);
   --brand-coral: oklch(0.81 0.128 347.5);
   --brand-coral-soft: oklch(0.95 0.04 347.5);
   --brand-lilac: oklch(0.759 0.132 329.5);
