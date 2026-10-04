@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { Minus, Plus } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -8,6 +9,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
 import { PageHeader } from "@/components/site/PageHeader";
+import { cn } from "@/lib/utils";
 
 const title = "Perguntas frequentes — Terapia ABA e acompanhamento infantil";
 const description =
