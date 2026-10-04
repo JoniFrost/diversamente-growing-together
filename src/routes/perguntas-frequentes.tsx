@@ -78,6 +78,32 @@ export const Route = createFileRoute("/perguntas-frequentes")({
   component: Faq,
 });
 
+const tones = ["blue", "green", "lilac", "yellow"] as const;
+type Tone = (typeof tones)[number];
+
+const toneClasses: Record<Tone, { card: string; badge: string }> = {
+  blue: {
+    card: "border-brand-blue/30",
+    badge:
+      "bg-brand-blue-soft text-brand-blue group-data-[state=open]:bg-brand-blue group-data-[state=open]:text-white",
+  },
+  green: {
+    card: "border-brand-green/30",
+    badge:
+      "bg-brand-green-soft text-brand-green group-data-[state=open]:bg-brand-green group-data-[state=open]:text-white",
+  },
+  lilac: {
+    card: "border-brand-lilac/30",
+    badge:
+      "bg-brand-lilac-soft text-brand-lilac group-data-[state=open]:bg-brand-lilac group-data-[state=open]:text-white",
+  },
+  yellow: {
+    card: "border-brand-yellow/60",
+    badge:
+      "bg-brand-yellow-soft text-brand-yellow-deep group-data-[state=open]:bg-brand-yellow group-data-[state=open]:text-foreground",
+  },
+};
+
 function Faq() {
   return (
     <>
@@ -88,22 +114,47 @@ function Faq() {
       />
 
       <div className="mx-auto max-w-3xl px-4 py-16">
-        <Reveal>
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, i) => (
-              <AccordionItem key={faq.q} value={`item-${i}`}>
-                <AccordionTrigger className="text-left font-display text-base font-bold">
-                  {faq.q}
-                </AccordionTrigger>
-                <AccordionContent className="text-foreground/75">{faq.a}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </Reveal>
+        <div className="space-y-4">
+          {faqs.map((faq, i) => {
+            const tone = toneClasses[tones[i % tones.length]];
+            return (
+              <Reveal as="div" key={faq.q} delay={i * 40}>
+                <AccordionItem
+                  value={`item-${i}`}
+                  className={cn(
+                    "group rounded-[1.5rem] border-2 bg-card p-1 shadow-soft transition-all duration-300 hover:-translate-y-1",
+                    tone.card,
+                  )}
+                >
+                  <AccordionTrigger className="px-5 py-5 font-display text-base font-bold no-underline hover:no-underline sm:text-lg [&>svg]:hidden">
+                    {faq.q}
+                    <span
+                      className={cn(
+                        "ml-4 inline-flex size-8 shrink-0 items-center justify-center rounded-full transition-colors duration-300",
+                        tone.badge,
+                      )}
+                      aria-hidden="true"
+                    >
+                      <Plus className="size-4 group-data-[state=open]:hidden" />
+                      <Minus className="hidden size-4 group-data-[state=open]:block" />
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-5 pb-5 leading-relaxed text-foreground/75">
+                    {faq.a}
+                  </AccordionContent>
+                </AccordionItem>
+              </Reveal>
+            );
+          })}
+        </div>
 
         <Reveal>
-          <div className="mt-12 text-center">
-            <Button asChild size="lg" className="rounded-full">
+          <div className="mt-14 text-center">
+            <Button
+              asChild
+              size="lg"
+              className="rounded-full px-8 text-base shadow-[0_6px_0_color-mix(in_oklab,var(--brand-coral)_72%,black)] transition-all active:translate-y-1 active:shadow-none"
+            >
               <Link to="/contactos">Pedir informações</Link>
             </Button>
           </div>
