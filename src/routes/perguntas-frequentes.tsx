@@ -114,7 +114,7 @@ function Faq() {
       />
 
       <div className="mx-auto max-w-3xl px-4 py-16">
-        <div className="space-y-4">
+        <Accordion type="single" collapsible className="space-y-4">
           {faqs.map((faq, i) => {
             const tone = toneClasses[tones[i % tones.length]];
             return (
