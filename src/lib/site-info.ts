@@ -10,7 +10,7 @@ export const siteInfo = {
   whatsapp: "911 905 532",
   whatsappHref: "https://wa.me/351911905532",
   instagram: "@diversamente.clinica",
-  instagramHref: "https://instagram.com/diversamente.clinica",
+  instagramHref: "https://www.instagram.com/diversamente.clinica/",
 };
 
 export const navLinks = [
