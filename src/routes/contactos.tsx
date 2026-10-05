@@ -207,13 +207,23 @@ function Contactos() {
                 </li>
                 <li className="flex gap-3">
                   <MessageCircle className="mt-0.5 size-5 shrink-0 text-brand-green" aria-hidden="true" />
-                  <a href={siteInfo.whatsappHref} className="hover:text-primary">
+                  <a
+                    href={siteInfo.whatsappHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary"
+                  >
                     {siteInfo.whatsapp}
                   </a>
                 </li>
                 <li className="flex gap-3">
                   <Instagram className="mt-0.5 size-5 shrink-0 text-brand-lilac" aria-hidden="true" />
-                  <a href={siteInfo.instagramHref} className="hover:text-primary">
+                  <a
+                    href={siteInfo.instagramHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary"
+                  >
                     {siteInfo.instagram}
                   </a>
                 </li>
