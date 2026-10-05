@@ -9,31 +9,16 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as ComoTrabalhamosRouteImport } from './routes/como-trabalhamos'
-import { Route as ContactosRouteImport } from './routes/contactos'
-import { Route as PerguntasFrequentesRouteImport } from './routes/perguntas-frequentes'
-import { Route as ServicosRouteImport } from './routes/servicos'
 import { Route as SobreNosRouteImport } from './routes/sobre-nos'
+import { Route as ServicosRouteImport } from './routes/servicos'
+import { Route as PerguntasFrequentesRouteImport } from './routes/perguntas-frequentes'
+import { Route as ContactosRouteImport } from './routes/contactos'
+import { Route as ComoTrabalhamosRouteImport } from './routes/como-trabalhamos'
+import { Route as IndexRouteImport } from './routes/index'
 
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ComoTrabalhamosRoute = ComoTrabalhamosRouteImport.update({
-  id: '/como-trabalhamos',
-  path: '/como-trabalhamos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactosRoute = ContactosRouteImport.update({
-  id: '/contactos',
-  path: '/contactos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PerguntasFrequentesRoute = PerguntasFrequentesRouteImport.update({
-  id: '/perguntas-frequentes',
-  path: '/perguntas-frequentes',
+const SobreNosRoute = SobreNosRouteImport.update({
+  id: '/sobre-nos',
+  path: '/sobre-nos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicosRoute = ServicosRouteImport.update({
@@ -41,9 +26,24 @@ const ServicosRoute = ServicosRouteImport.update({
   path: '/servicos',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SobreNosRoute = SobreNosRouteImport.update({
-  id: '/sobre-nos',
-  path: '/sobre-nos',
+const PerguntasFrequentesRoute = PerguntasFrequentesRouteImport.update({
+  id: '/perguntas-frequentes',
+  path: '/perguntas-frequentes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactosRoute = ContactosRouteImport.update({
+  id: '/contactos',
+  path: '/contactos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComoTrabalhamosRoute = ComoTrabalhamosRouteImport.update({
+  id: '/como-trabalhamos',
+  path: '/como-trabalhamos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -110,32 +110,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/como-trabalhamos': {
-      id: '/como-trabalhamos'
-      path: '/como-trabalhamos'
-      fullPath: '/como-trabalhamos'
-      preLoaderRoute: typeof ComoTrabalhamosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contactos': {
-      id: '/contactos'
-      path: '/contactos'
-      fullPath: '/contactos'
-      preLoaderRoute: typeof ContactosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/perguntas-frequentes': {
-      id: '/perguntas-frequentes'
-      path: '/perguntas-frequentes'
-      fullPath: '/perguntas-frequentes'
-      preLoaderRoute: typeof PerguntasFrequentesRouteImport
+    '/sobre-nos': {
+      id: '/sobre-nos'
+      path: '/sobre-nos'
+      fullPath: '/sobre-nos'
+      preLoaderRoute: typeof SobreNosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/servicos': {
@@ -145,11 +124,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicosRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/sobre-nos': {
-      id: '/sobre-nos'
-      path: '/sobre-nos'
-      fullPath: '/sobre-nos'
-      preLoaderRoute: typeof SobreNosRouteImport
+    '/perguntas-frequentes': {
+      id: '/perguntas-frequentes'
+      path: '/perguntas-frequentes'
+      fullPath: '/perguntas-frequentes'
+      preLoaderRoute: typeof PerguntasFrequentesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contactos': {
+      id: '/contactos'
+      path: '/contactos'
+      fullPath: '/contactos'
+      preLoaderRoute: typeof ContactosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/como-trabalhamos': {
+      id: '/como-trabalhamos'
+      path: '/como-trabalhamos'
+      fullPath: '/como-trabalhamos'
+      preLoaderRoute: typeof ComoTrabalhamosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
   }

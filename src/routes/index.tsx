@@ -237,7 +237,7 @@ function Index() {
             <p className="text-lg leading-relaxed text-foreground/80">Na Diversamente, acreditamos que cada criança tem competências únicas e uma forma própria de descobrir o mundo. O nosso trabalho parte dos seus interesses e motivações para desenvolver capacidades importantes para o seu dia a dia.</p>
           </Reveal>
           <Reveal delay={80} className="rounded-3xl bg-brand-yellow-soft p-7 sm:p-10 lg:col-span-5">
-            <p className="text-lg leading-relaxed text-foreground/80">Através de atividades estruturadas, brincadeira e acompanhamento especializado, trabalhamos áreas como comunicação, autonomia, interação social, competências cognitivas, aprendizagem e regulação emocional.</p>
+            <p className="text-lg leading-relaxed text-foreground/80">Através de atividades estruturadas, brincadeira e acompanhamento especializado, trabalhamos áreas como comunicação, autonomia, interação social, competências cognitivas, aprendizagem, competências pré-académicas e académicas e regulação emocional.</p>
           </Reveal>
         </div>
 
