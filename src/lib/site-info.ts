@@ -6,7 +6,7 @@ export const siteInfo = {
   phoneHref: "tel:+351911905532",
   email: "diversamente@outlook.pt",
   emailHref: "mailto:diversamente@outlook.pt",
-  schedule: "Segunda a sexta: 08h30 – 18h30 · Sábado: 09h – 15h",
+  schedule: "Segunda a sexta: 08h30 – 18h30 · Sábado: 09h – 13h",
   whatsapp: "911 905 532",
   whatsappHref: "https://wa.me/351911905532",
   instagram: "@diversamente.clinica",
