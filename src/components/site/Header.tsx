@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { navLinks } from "@/lib/site-info";
-import logoAsset from "@/assets/logo-diversamente.png.asset.json";
+import logoAsset from "@/assets/logo-diversamente.png";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -13,7 +13,7 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-2">
         <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
           <img
-            src={logoAsset.url}
+            src={logoAsset}
             alt="Logótipo Diversamente"
             width={669}
             height={362}
