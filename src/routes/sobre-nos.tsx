@@ -2,9 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
 import { PageHeader } from "@/components/site/PageHeader";
-import adrianaPhoto from "@/assets/adriana-madeira.jpg";
-import inesPhoto from "@/assets/ines-costa.png";
-import neidPhoto from "@/assets/neid-cardoso.jpg";
+const adrianaPhoto = "/images/adriana-madeira.jpg";
+const inesPhoto = "/images/ines-costa.png";
+const neidPhoto = "/images/neid-cardoso.jpg";
 import { Heart, Users, Puzzle, Lightbulb, Star, Sparkles } from "lucide-react";
 
 

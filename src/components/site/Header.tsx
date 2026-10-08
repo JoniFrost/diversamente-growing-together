@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { navLinks } from "@/lib/site-info";
-import logoAsset from "@/assets/logo-diversamente.png";
+const logoAsset = "/images/logo-diversamente.png";
 
 export function Header() {
   const [open, setOpen] = useState(false);
