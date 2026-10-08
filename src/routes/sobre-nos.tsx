@@ -2,9 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
 import { PageHeader } from "@/components/site/PageHeader";
-import adrianaPhoto from "@/assets/adriana-madeira.jpg.asset.json";
-import inesPhoto from "@/assets/ines-costa.png.asset.json";
-import neidPhoto from "@/assets/neid-cardoso.jpg.asset.json";
+import adrianaPhoto from "@/assets/adriana-madeira.jpg";
+import inesPhoto from "@/assets/ines-costa.png";
+import neidPhoto from "@/assets/neid-cardoso.jpg";
 import { Heart, Users, Puzzle, Lightbulb, Star, Sparkles } from "lucide-react";
 
 
@@ -266,7 +266,7 @@ function SobreNos() {
             <Reveal>
               <article className="rounded-3xl border border-border/60 bg-card p-7 text-center shadow-soft">
                 <img
-                  src={adrianaPhoto.url}
+                  src={adrianaPhoto}
                   alt="Fotografia de Adriana Madeira, psicóloga educacional na Diversamente"
                   width={192}
                   height={192}
@@ -284,7 +284,7 @@ function SobreNos() {
             <Reveal delay={90}>
               <article className="rounded-3xl border border-border/60 bg-card p-7 text-center shadow-soft">
                 <img
-                  src={inesPhoto.url}
+                  src={inesPhoto}
                   alt="Fotografia de Inês Costa, psicóloga clínica na Diversamente"
                   width={192}
                   height={192}
@@ -302,7 +302,7 @@ function SobreNos() {
             <Reveal delay={180}>
               <article className="rounded-3xl border border-border/60 bg-card p-7 text-center shadow-soft">
                 <img
-                  src={neidPhoto.url}
+                  src={neidPhoto}
                   alt="Fotografia de Neid Cardoso, psicóloga na Diversamente"
                   width={192}
                   height={192}
