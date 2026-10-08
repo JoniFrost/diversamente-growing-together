@@ -213,7 +213,7 @@ function Index() {
             <div className="absolute -right-4 bottom-20 h-24 w-24 rotate-12 rounded-2xl bg-brand-yellow" aria-hidden="true" />
             <div className="relative rotate-1 overflow-hidden rounded-[3rem] border-[12px] border-card bg-card shadow-soft">
               <img
-                src={heroImage.url}
+                src={heroImage}
                 alt="Profissional e criança a brincar juntos com blocos e puzzles numa sala acolhedora"
                 width={1200}
                 height={1008}
